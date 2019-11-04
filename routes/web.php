@@ -1,0 +1,115 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', [
+    'as' => 'index',
+    'uses' => 'PagesController@getIndex'
+]);
+
+Route::get('/about/aboutus',function() {
+    return view('about');
+})->name('about');
+
+Route::get('/blog', [
+    'as' => 'blog',
+    'uses' => 'PostController@index'
+]);
+
+Route::get('/blog/{slug}', [
+    'as' => 'blog.single', 
+    'uses' => 'PagesController@getSingle'
+])->where('slug', '[\w\d\-\_]+');
+
+Route::get('/tag/{name}', [
+    'as' => 'tags.view', 
+    'uses' => 'PagesController@getSingleTag'
+])->where('name', '[\w\d\-\_]+');
+
+Route::get('/contact', function() {
+    return view('contact');
+})->name('contact');
+Route::post('/contact', ['as' => 'postContact', 'uses' => 'PagesController@postMail']);
+
+Route::get('/memories', ['as' => 'gallery', 'uses' => 'PagesController@gallery']);
+
+Route::get('/about/commitee', function() {
+    return view('commitee');
+})->name('commitee');
+
+Route::get('/about/members', [
+    'uses' => 'MemberController@index',
+    'as' => 'members'
+]);
+
+Route::get('/news', ['uses' => 'PostController@news', 'as' => 'posts.news']);
+Route::get('/news/{slug}', [
+    'uses' => 'PagesController@getSingleNews',
+    'as' => 'news.single'
+])->where('slug', '[\w\d\-\_]+');
+
+Route::get('/wisdom' , function() {
+    return view('wisdom');
+})->name('wisdom');
+
+Route::get('/trails' , function() {
+    return view('trails');
+})->name('trails');
+
+Route::get('/signin', function(){
+    return redirect()->route('getSignin');
+});
+
+Route::resource('tags', 'TagController', ['except' => 'create']);
+Route::resource('posts', 'PostController', ['middleware' => 'auth', 'except' => ['index', 'news']]);
+Route::resource('albums', 'AlbumController', ['middleware' => 'auth', 'except' => 'show']);
+
+Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
+Route::get('comments/{id}/edit', ['uses' => 'CommentsController@edit', 'as' => 'comments.edit']);
+Route::put('comments/{id}', ['uses' => 'CommentsController@update', 'as' => 'comments.update']);
+Route::delete('comments/{id}', ['uses' => 'CommentsController@destroy', 'as' => 'comments.destroy']);
+
+Route::get('/list/posts',[
+    'uses' => 'PostController@list',
+    'as' => 'posts.list',
+    'middleware' => 'auth'
+]);
+
+Route::get('/list/news',[
+    'uses' => 'PostController@news_list',
+    'as' => 'posts.news_list',
+    'middleware' => 'auth'
+]);
+
+Route::get('/auth/signin', function(){
+    return view('auth.signin');
+})->name('getSignin');
+
+Route::get('/auth/signup', function(){
+    return view('auth.signup');
+})->name('getSignup');
+
+Route::post('/auth/signup', 'UserController@SignUp')->name('signup');
+Route::post('/auth/signin', 'UserController@SignIn')->name('signin');
+Route::get('/auth/signout', 'UserController@SignOut')->name('signout');
+
+Route::get('/home', [
+    'as' => 'account.home',
+    'uses' => 'PagesController@getHome',
+    'middleware' => 'auth'
+]);
+Route::get('/dashboard', [
+    'as' => 'account.dashboard', 
+    'uses' => 'PagesController@getDashboard',
+    'middleware' => 'auth'
+]);
+
