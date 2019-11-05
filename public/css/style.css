@@ -476,7 +476,7 @@ ul.dropdown-menu li a:hover {
     position: fixed;
     top: 15%;
     right: 30px;
-    z-index: 100;
+    z-index: 3;
 }
 
 .social ul {
@@ -714,6 +714,10 @@ p.related-content:hover {
     display: flex;
 }
 
+.row.top-padding {
+    width: 100vw;
+}
+
 .circular {
     display: inline-block;
     position: relative;
@@ -747,6 +751,13 @@ p.related-content:hover {
     .scroll-commitee {
         flex-wrap: wrap;
         overflow: unset;
+    }
+}
+
+@media(max-width:940px) {
+    .circular {
+        width: 200px;
+        height: 200px;
     }
 }
 

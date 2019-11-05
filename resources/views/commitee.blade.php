@@ -88,7 +88,7 @@
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Harith hansaka' , 'image' => asset('images/commitee/finance-1.jpg') , 'email' => 'harithhansaka@gmail.com' , 'fbusername' => 'fb.com/harithhansaka' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Dulan Chandrasiri' , 'image' => asset('images/commitee/person.jpg') , 'email' => '96dulanchandrasiri@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Daneesha Ranasinghe' , 'image' => asset('images/commitee/finance-3.jpg') , 'email' => 'daneesharanasinghe@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nawodani Jayasooriya' , 'image' => asset('images/commitee/Person.jpg') , 'email' => 'nawojay@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nawodani Jayasooriya' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'nawojay@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Chamin Naveendra' , 'image' => asset('images/commitee/finance-5.jpg') , 'email' => 'chaminnaveendra@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                 </div>
             </section>
