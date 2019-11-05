@@ -718,6 +718,33 @@ p.related-content:hover {
     width: 100vw;
 }
 
+.social-env {
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    background: #ff00d4;
+    padding: 7px 8px;
+    border-radius: 50%;
+}
+
+.social-fb {
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    background: #4267b2;
+    padding: 8px 8px 5px 8px;
+    border-radius: 50%;
+}
+
+.social-fb {
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    background: #4267b2;
+    padding: 8px 8px 5px 8px;
+    border-radius: 50%;
+}
+
 .circular {
     display: inline-block;
     position: relative;
@@ -747,17 +774,21 @@ p.related-content:hover {
     overflow-x: scroll;
 }
 
+@media(max-width:940px) {
+    .circular {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @media (max-width:768px) {
     .scroll-commitee {
         flex-wrap: wrap;
         overflow: unset;
     }
-}
-
-@media(max-width:940px) {
     .circular {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 }
 

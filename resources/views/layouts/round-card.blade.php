@@ -7,12 +7,12 @@
     <ul class="list-unstyled">
         @if($email != '')
         <a class="team-social" href="mailto:{{ $email }}">
-            <i class="fa fa-envelope"></i>
+            <i class="fa fa-envelope social-env"></i>
         </a>
         @endif
         @if($fbusername != '')
         <a class="team-social" href="{{ $fbusername }}">
-            <i class="fa fa-facebook"></i>
+            <i class="fa fa-facebook social-fb"></i>
         </a>
         @endif
     </ul>
