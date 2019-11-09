@@ -1197,12 +1197,7 @@ p.related-content:hover {
 
 .gallery-item {
     overflow: hidden;
-    -webkit-filter: grayscale(0);
     transition: all 0.5s;
-}
-
-.gallery-card:hover .gallery-item {
-    -webkit-filter: grayscale(1);
 }
 
 .gallery-card {
