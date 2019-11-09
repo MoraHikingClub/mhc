@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             //personal details
             $table->increments('id')->unsigned();
             $table->string('title');
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->timestamps();
         });
     }

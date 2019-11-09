@@ -68,7 +68,7 @@ class PostController extends Controller
 
         $post = new Post;
         $post->title = $request->title;
-        $post->body = $request->body;
+        $post->body = str_replace('&nbsp;',' ',$request->body);
         $post->post_type = $request->post_type;
         $post->featured_img = $request->featured_img;
         $post->save();
@@ -156,7 +156,7 @@ class PostController extends Controller
         }
                 
         $post->title = $request->title;
-        $post->body = $request->body;
+        $post->body = str_replace('&nbsp;',' ',$request->body);
         $post->post_type = $request->post_type;
         $post->featured_img = $request->featured_img;
         
