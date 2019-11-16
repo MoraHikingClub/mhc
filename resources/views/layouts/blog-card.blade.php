@@ -16,7 +16,10 @@
             <div class="readmore"><a href="{{ $link }}" class="readmore-btn"><span>Read more</span></a></div>
         </div>
         <div class="timeline-footer">
-            <p class="text-right">{{ $date }}</p>
+            <p class="text-right">
+                <span class="float-left"><i class="fa fa-eye view-count-icon"></i> {{ $visit_count }} <i class="fa fa-comment comment-count-icon"></i> {{ $comment_count }}</span>
+                {{ $date }}
+            </p>
         </div>
     </div>
 </li>

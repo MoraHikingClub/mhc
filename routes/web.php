@@ -11,6 +11,8 @@
 |
 */
 
+use App\Knowledge;
+
 Route::get('/', [
     'as' => 'index',
     'uses' => 'PagesController@getIndex'
@@ -57,9 +59,9 @@ Route::get('/news/{slug}', [
     'as' => 'news.single'
 ])->where('slug', '[\w\d\-\_]+');
 
-Route::get('/wisdom' , function() {
-    return view('wisdom');
-})->name('wisdom');
+// Route::get('/wisdom' , function() {
+//     return view('wisdom');
+// })->name('wisdom');
 
 Route::get('/trails' , function() {
     return view('trails');
@@ -111,5 +113,20 @@ Route::get('/dashboard', [
     'as' => 'account.dashboard', 
     'uses' => 'PagesController@getDashboard',
     'middleware' => 'auth'
+]);
+
+Route::resource('knowledge','KnowledgeController',['middleware' => 'auth', 'except' => 'index']);
+Route::get('/knowledge', [
+    'uses' => 'KnowledgeController@index',
+    'as' => 'knowledge.index'
+]);
+Route::get('/list/knowledge',[
+    'uses' => 'KnowledgeController@list',
+    'as' => 'knowledge.list',
+    'middleware' => 'auth'
+]);
+Route::get('/viewknowledge/{id}',[
+    'uses' => 'KnowledgeController@singleCard',
+    'as' => 'knowledge.singleCard'
 ]);
 

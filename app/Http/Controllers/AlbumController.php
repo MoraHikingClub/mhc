@@ -90,6 +90,10 @@ class AlbumController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $album = Album::find($id);
+        $album->delete();
+
+        Session::flash('success', 'Album deleted successfully');
+        return redirect()->route('albums.index');
     }
 }

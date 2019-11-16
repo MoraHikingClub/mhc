@@ -19,7 +19,7 @@ Mora Hiking Club | News
                     <div class="card-body">
                         <h5 class="card-title">{{ $news1->title }}</h5>
                         <p class="card-text">{!! substr(strip_tags($news1->body), 0, 300) !!}</p>
-                        <a target="_blank" href="{{ (strstr($news1->slug, 'http') ? $news1->slug : 'news/'.$news1->slug) }}">
+                        <a {{ (strstr($news1->slug, 'http') ? 'target="_blank"' : '') }} href="{{ (strstr($news1->slug, 'http') ? $news1->slug : 'news/'.$news1->slug) }}">
                             <button class="btn btn-success">Read more</button>
                         </a>
                     </div>

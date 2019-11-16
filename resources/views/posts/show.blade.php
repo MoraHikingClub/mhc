@@ -17,6 +17,7 @@ Mora Hiking Club | {{ $post->title }}
                 <p>
                     {!! $post->body !!}
                 </p>
+                <p><i class="fa fa-eye view-count-icon"></i> {{ $post->visit_count }} <i class="fa fa-comment comment-count-icon"></i> {{ count($post->comments) }}</p>
                 <div class="text-muted margin-bottom">
                     <small>
                         Created : {{ date('M j, Y h:ia', strtotime($post->created_at)) }}<br>

@@ -21,7 +21,7 @@
 				$i = 1;
 			@endphp
 			@foreach($posts as $post)
-				@include('layouts.blog-card' , [ 'side' => (($i%2)===0 ? 'right' : 'left') , 'title' => $post->title , 'content' => substr(strip_tags($post->body), 0, 300) , 'link' => 'blog/'.$post->slug , 'date' => date('M j, Y h:ia', strtotime($post->created_at)) , 'header' => $post->featured_img ])
+				@include('layouts.blog-card' , [ 'side' => (($i%2)===0 ? 'right' : 'left') , 'title' => $post->title , 'content' => substr(strip_tags($post->body), 0, 300) , 'link' => 'blog/'.$post->slug , 'date' => date('M j, Y h:ia', strtotime($post->created_at)) , 'header' => $post->featured_img , 'visit_count' => $post->visit_count, 'comment_count' => count($post->comments)])
 				@php
 					$i++;
 				@endphp

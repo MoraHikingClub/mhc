@@ -93,6 +93,10 @@
                 opacity: .2;
             }
         }
+
+        li.nav-item>.nav-link{
+            padding-bottom:0;
+        }
     </style>
 
 </head>
@@ -129,51 +133,51 @@
                                 </a>
                                 <ul class="dropdown-menu agile_short_drop_down">
                                     <li>
-                                        <a href="{{ route('about') }}">About Us</a>
+                                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('commitee') }}">Commitee</a>
+                                        <a class="nav-link" href="{{ route('commitee') }}">Commitee</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('members') }}">Members</a>
+                                        <a class="nav-link" href="{{ route('members') }}">Members</a>
                                     </li>
                                 </ul>
                             </li>
 
                             @if(Auth::check())
                             <!--only accessible for editors-->
-                            <li class="dropdown nav-item {{ Request::segment(1) === 'blog' ? 'active' : '' }}">
+                            <li class="dropdown nav-item {{ (Request::segment(1) === 'blog' || Request::segment(1) === 'posts' && Request::get('post_type') === 'blog' || Request::segment(2) === 'posts' || Request::segment(1) === 'tags') ? 'active' : '' }}">
                                 <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Blog
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu agile_short_drop_down">
-                                    <li>
-                                        <a href="{{ route('blog') }}">Blog</a>
+                                    <li class="nav-item {{ (Request::segment(1) === 'blog') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('posts.create',['post_type' => 'blog']) }}">New post</a>
+                                    <li class="nav-item {{ (Request::segment(1) === 'posts' && Request::segment(2) === 'create' && Request::get('post_type') === 'blog') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('posts.create',['post_type' => 'blog']) }}">New post</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('posts.list') }}">All posts</a>
+                                    <li class="nav-item {{ (Request::segment(2) === 'posts') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('posts.list') }}">All posts</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('tags.index') }}">Tags</a>
+                                    <li class="nav-item {{ (Request::segment(1) === 'tags') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('tags.index') }}">Tags</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown nav-item {{ Request::segment(1) === 'news' ? 'active' : '' }}">
+                            <li class="dropdown nav-item {{ (Request::segment(1) === 'news' || Request::segment(1) === 'posts' && Request::get('post_type') === 'news' || Request::segment(2) === 'news') ? 'active' : '' }}">
                                 <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">News
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu agile_short_drop_down">
-                                    <li class="nav-item {{ Request::segment(1) === 'news' ? 'active' : '' }}">
-                                        <a href="{{ route('posts.news') }}">News</a>
+                                    <li class="nav-item {{ (Request::segment(1) === 'news') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('posts.news') }}">News</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('posts.create',['post_type' => 'news']) }}">New news</a>
+                                    <li class="nav-item {{ (Request::segment(1) === 'posts' && Request::segment(2) === 'create' && Request::get('post_type') === 'news') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('posts.create',['post_type' => 'news']) }}">New news</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('posts.news_list') }}">All news</a>
+                                    <li class="nav-item {{ (Request::segment(2) === 'news') ? 'active' : '' }}">
+                                        <a class="nav-link" href="{{ route('posts.news_list') }}">All news</a>
                                     </li>
                                 </ul>
                             </li>
@@ -189,10 +193,30 @@
 
                             <!--li class="nav-item {{ request::segment(1) === 'trails' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('trails') }}">Trails</a>
-                            </li>
-                            <li class="nav-item {{ request::segment(1) === 'wisdom' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('wisdom') }}">Wisdom</a>
                             </li-->
+                            @if(Auth::check())
+                            <li class="dropdown nav-item {{ (Request::segment(1) === 'knowledge' || Request::segment(1) === 'viewknowledge' || Request::segment(2) === 'knowledge') ? 'active' : '' }}">
+                                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Knowledge
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu agile_short_drop_down">
+                                        <li class="nav-item {{ (Request::segment(1) === 'knowledge' && Request::segment(2) === '') ? 'active' : '' }}">
+                                            <a class="nav-link" href="{{ route('knowledge.index') }}">Knowledge</a>
+                                        </li>
+                                        <li class="nav-item {{ (Request::segment(1) === 'knowledge' && Request::segment(2) === 'create') ? 'active' : '' }}">
+                                            <a class="nav-link" href="{{ route('knowledge.create') }}">Create card</a>
+                                        </li>
+                                        <li class="nav-item {{ Request::segment(2) === 'knowledge' ? 'active' : '' }}">
+                                            <a class="nav-link" href="{{ route('knowledge.list') }}">All cards</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @else
+                            <li class="nav-item {{ request::segment(1) === 'knowledge' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('knowledge.index') }}">Knowledge</a>
+                            </li>
+                            @endif
+
                             @if(Auth::check())
                             <li class="dropdown nav-item {{ (Request::segment(1) === 'albums' || Request::segment(1) === 'gallery') ? 'active' : '' }}">
                                     <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Memories
@@ -200,13 +224,13 @@
                                     </a>
                                     <ul class="dropdown-menu agile_short_drop_down">
                                         <li class="nav-item {{ Request::segment(1) === 'gallery' ? 'active' : '' }}">
-                                            <a href="{{ route('gallery') }}">Memories</a>
+                                            <a class="nav-link" href="{{ route('gallery') }}">Memories</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('albums.create') }}">Create album</a>
+                                            <a class="nav-link" href="{{ route('albums.create') }}">Create album</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('albums.index') }}">Album list</a>
+                                            <a class="nav-link" href="{{ route('albums.index') }}">Album list</a>
                                         </li>
                                     </ul>
                                 </li>

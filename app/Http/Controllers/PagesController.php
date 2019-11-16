@@ -19,13 +19,15 @@ class PagesController extends Controller
 
     public function getSingle($slug){
         $post = Post::where('slug', '=', $slug)->first();
-        
+        $post->visit_count += 1;
+        $post->save();
         return view('blog.single')->with('post',$post);
     }
 
     public function getSingleNews($slug){
         $news = Post::where('slug', '=', $slug)->first();
-
+        $news->visit_count += 1;
+        $news->save();
         return view('news.single')->with('news', $news);
     }
 
