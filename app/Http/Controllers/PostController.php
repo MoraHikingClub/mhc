@@ -192,4 +192,48 @@ class PostController extends Controller
         $posts = Post::orderBy('id','desc')->paginate(10);
         return view('posts.index')->with('posts', $posts);
     }
+
+
+    //api functions
+
+
+    public function api_index(Request $request){
+        if($request->header('api_token')){
+            $posts = Post::where('post_type','=','blog')->orderBy('id','desc')->paginate(10);
+
+            return response()->json($posts,200);
+        }else{
+            return response()->json('auth_api_token missing', 401);
+        }
+    }
+
+    public function api_news(Request $request){
+        if($request->header('api_token')){
+            $news = Post::where('post_type','=','news')->orderBy('id','desc')->paginate(10);
+
+            return response()->json($news,200);
+        }else{
+            return response()->json('auth_api_token missing', 401);
+        }
+    }
+
+    public function api_show($id, Request $request){
+        if($request->header('api_token')){
+            $post = Post::where('post_type','=','blog')->find($id);
+
+            return response()->json($post,200);
+        }else{
+            return response()->json('auth_api_token missing', 401);
+        }
+    }
+
+    public function api_news_show($id, Request $request){
+        if($request->header('api_token')){
+            $post = Post::where('post_type','=','news')->find($id);
+
+            return response()->json($post,200);
+        }else{
+            return response()->json('auth_api_token missing', 401);
+        }
+    }
 }
