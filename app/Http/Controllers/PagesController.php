@@ -6,15 +6,31 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Tag;
 use App\Album;
+use App\Launch;
 use Mail;
 use Session;
 
 class PagesController extends Controller
 {
     public function getIndex(){
+        $launch = Launch::find(1);
+        if($launch->launch){
+            $post = Post::latest()->first();
+
+            return view('index')->with('post', $post)->with('launch', 0);
+        }else{
+            return view('launch');
+        }
+    }
+
+    public function launch(){
+        $launch = Launch::find(1);
+        $launch->launch = 1;
+        $launch->save();
+
         $post = Post::latest()->first();
 
-        return view('index')->with('post', $post);
+        return view('index')->with('post', $post)->with('launch',$launch);
     }
 
     public function getSingle($slug){

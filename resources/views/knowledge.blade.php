@@ -8,7 +8,7 @@ Mora Hiking Club | Hiking Knowledge
 
 @include('layouts.social')
 <div class="knowledge-contain">
-    <div class="container" style="height:100%;padding-bottom:15px;">
+    <div class="container">
         <div class="row margin-bottom">
             <div class="col-md-12">
                 <p class="text-light">If you're gearing up to head out on a hike, you certainly want to make sure you
@@ -34,8 +34,14 @@ Mora Hiking Club | Hiking Knowledge
         </ul>
         <div class="tab-content knowledge-tab" id="knowledgeTabContent">
             <div class="tab-pane fade show active" id="knot" role="tabpanel" aria-labelledby="knot-tab">
+                @php
+                    $i=0;
+                @endphp
                 @foreach($knowledges as $knowledge)
                 @if($knowledge->type == 'knot')
+                @php
+                    $i++;
+                @endphp
                 <div class="card mb-3 gallery-card">
                     <div class="row no-gutters">
                         <div class="col-md-8">
@@ -64,10 +70,19 @@ Mora Hiking Club | Hiking Knowledge
                 </div>
                 @endif
                 @endforeach
+                @if(!$i)
+                    <h3 class="text-light text-center">When you reach the end of your rope, tie a <big><b>knot</b></big> int it and hnag on.</h3>
+                @endif
             </div>
             <div class="tab-pane fade" id="firstaid" role="tabpanel" aria-labelledby="firstaid-tab">
+                @php
+                    $i=0;
+                @endphp
                 @foreach($knowledges as $knowledge)
                 @if($knowledge->type == 'firstaid')
+                @php
+                    $i++;
+                @endphp
                 <div class="card mb-3 gallery-card">
                     <div class="row no-gutters">
                         <div class="col-md-8">
@@ -93,10 +108,19 @@ Mora Hiking Club | Hiking Knowledge
                 </div>
                 @endif
                 @endforeach
+                @if(!$i)
+                    <h3 class="text-light text-center"><big><b>Safety</b></big> brings first aid to the uninjured.</h3>
+                @endif
             </div>
             <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+                @php
+                    $i=0;
+                @endphp
                 @foreach($knowledges as $knowledge)
                 @if($knowledge->type == 'map')
+                @php
+                    $i++;
+                @endphp
                 <div class="card mb-3 gallery-card">
                     <div class="row no-gutters">
                         <div class="col-md-8">
@@ -122,6 +146,9 @@ Mora Hiking Club | Hiking Knowledge
                 </div>
                 @endif
                 @endforeach
+                @if(!$i)
+                    <h3 class="text-light text-center">If you don't know where you are, a <big><b>map</b></big> won't help.</h3>
+                @endif
             </div>
         </div>
     </div>

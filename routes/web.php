@@ -130,3 +130,5 @@ Route::get('/viewknowledge/{id}',[
     'as' => 'knowledge.singleCard'
 ]);
 
+Route::post('/', 'PagesController@launch');
+

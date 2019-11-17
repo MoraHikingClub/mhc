@@ -252,10 +252,33 @@
         </div>
     </header>
     <div class="loader-bg">
+        @if($launch)
+        <span class="loading" style="font-weight:1000;font-size:300px;top:100px;" id="num">5</span>
+        <p class="loading" style="font-weight:1000;font-size:200px;">Launching<span>.</span><span>.</span><span>.</span></p>
+        <script>
+            var i = 1
+            var interval = setInterval(function(){
+                document.getElementById('num').innerHTML = 5-i;
+                if(i==5){
+                    clearInterval(interval);
+                    const loader = document.querySelector(".loader-bg");
+                    loader.className += " hidden";
+                }
+                i++;
+            },1000);
+        </script>
+        @else
         <div class="loader">
             <img src="{{ asset('images\loading.gif') }}" alt="Loading" />
         </div>
         <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
+        <script type="text/javascript">
+            window.addEventListener("load", function(){
+                const loader = document.querySelector(".loader-bg");
+                loader.className += " hidden";
+            });
+        </script>
+        @endif
     </div>
 
     @include('layouts.messages')
@@ -265,12 +288,7 @@
     @yield('script')
 
     <!-- fixed header/ opaque on scroll -->
-    <script type="text/javascript">
-        window.addEventListener("load", function(){
-            const loader = document.querySelector(".loader-bg");
-            loader.className += " hidden";
-        });
-    </script>
+    
 
     <script>
         $(document).ready(function() {

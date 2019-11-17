@@ -178,7 +178,7 @@ class UserController extends Controller
 
         //club details
         $user->mem_cat = $request->mem_cat;
-        $user->join_date = $request->join_date_m.'/'.$request->join_date_y;
+        $user->join_date = $request->join_date_m.'-'.$request->join_date_y;
         $user->skills = join(', ', $request->skills);
         $user->bio = $request->bio;
         $user->fb_url = $request->fb_url;

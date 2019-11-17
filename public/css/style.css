@@ -1243,6 +1243,11 @@ p.related-content:hover {
     height: 100vh;
 }
 
+.knowledge-contain>.container {
+    height: 100%;
+    padding-bottom: 15px;
+}
+
 .knowledge-tab {
     border: 1px solid #fff;
     border-radius: 0 0 10px 10px;
@@ -1255,4 +1260,18 @@ p.related-content:hover {
 .view-count-icon,
 .comment-count-icon {
     margin-left: 5px;
+}
+
+@media(max-width:768px) {
+    .knowledge-contain {
+        height: 150vh;
+    }
+    .knowledge-contain>.container {
+        height: 100vh;
+    }
+    .blog-contain,
+    .news-contain,
+    .gallery {
+        height: auto;
+    }
 }
