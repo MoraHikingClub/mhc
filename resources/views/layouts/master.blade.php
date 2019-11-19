@@ -108,7 +108,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/scroll-entrance.js') }}"></script>
     <header>
@@ -252,6 +252,10 @@
         </div>
     </header>
     <div class="loader-bg">
+        @php
+            $launch = isset($launch) ? $launch : '';
+        @endphp
+
         @if($launch)
         <span class="loading" style="font-weight:1000;font-size:300px;top:100px;" id="num">5</span>
         <p class="loading" style="font-weight:1000;font-size:200px;">Launching<span>.</span><span>.</span><span>.</span></p>

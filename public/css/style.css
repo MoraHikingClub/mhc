@@ -774,6 +774,10 @@ p.related-content:hover {
     overflow-x: scroll;
 }
 
+.list-unstyled {
+    margin-bottom: 10px;
+}
+
 @media(max-width:940px) {
     .circular {
         width: 200px;
@@ -801,7 +805,7 @@ p.related-content:hover {
     background-attachment: fixed;
     background-size: cover;
     background-image: url('../images/blog.jpg');
-    height: 100vh;
+    height: auto;
 }
 
 

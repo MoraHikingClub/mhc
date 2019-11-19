@@ -97,7 +97,8 @@ Route::get('/auth/signin', function(){
 })->name('getSignin');
 
 Route::get('/auth/signup', function(){
-    return view('auth.signup');
+    //return view('auth.signup');
+    return redirect()->route('index');
 })->name('getSignup');
 
 Route::post('/auth/signup', 'UserController@SignUp')->name('signup');

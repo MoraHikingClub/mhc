@@ -11,7 +11,7 @@
         </a>
         @endif
         @if($fbusername != '')
-        <a class="team-social" href="{{ $fbusername }}">
+        <a class="team-social" href="{{ $fbusername }}" target="_blank">
             <i class="fa fa-facebook social-fb"></i>
         </a>
         @endif

@@ -71,7 +71,7 @@ Mora Hiking Club | Hiking Knowledge
                 @endif
                 @endforeach
                 @if(!$i)
-                    <h3 class="text-light text-center">When you reach the end of your rope, tie a <big><b>knot</b></big> int it and hnag on.</h3>
+                    <h3 class="text-light text-center">When you reach the end of your rope, tie a <big><b>knot</b></big> in it and hang on.</h3>
                 @endif
             </div>
             <div class="tab-pane fade" id="firstaid" role="tabpanel" aria-labelledby="firstaid-tab">

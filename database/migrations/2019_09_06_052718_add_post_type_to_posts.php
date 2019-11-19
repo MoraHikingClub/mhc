@@ -26,7 +26,7 @@ class AddPostTypeToPosts extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            dropColumn('post_type');
+            $table->dropColumn('post_type');
         });
     }
 }
