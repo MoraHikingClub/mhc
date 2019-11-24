@@ -12,7 +12,7 @@ class UserController extends Controller
     public function SignIn(Request $request)
     {
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect()->route('posts.list');
+            return redirect()->route('account.dashboard');
         }else{
             Session::flash('error', 'Invalid credintials, Try again');
             return redirect()->back();
@@ -103,7 +103,7 @@ class UserController extends Controller
         Session::flash('success', 'Account have been created successfully');
 
         Auth::login($user);
-        return redirect()->route('index');
+        return redirect()->route('account.dashboard');
     }
 
     public function SignOut(){

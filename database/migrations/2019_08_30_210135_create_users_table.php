@@ -59,8 +59,8 @@ class CreateUsersTable extends Migration
             $table->string('medicine');
             
             //admin
-            $table->boolean('activated')->default('0');
-            $table->string('role')->default('member');
+            $table->boolean('activated')->default(0);
+            $table->bigInteger('role_id')->unsigned()->default(3);
             $table->timestamp('acc_activated_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
@@ -74,6 +74,8 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+
+        
         Schema::dropIfExists('users');
     }
 }

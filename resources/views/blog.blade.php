@@ -9,7 +9,7 @@
 <!-- 40 word from each blog post will be shown here -->
 @include('layouts.social')
 
-<div class="blog-contain">
+<div class="blog-contain" {!! (count($posts)<3) ? 'style="height:100vh"':'' !!}>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

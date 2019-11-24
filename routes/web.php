@@ -93,7 +93,11 @@ Route::get('/list/news',[
 ]);
 
 Route::get('/auth/signin', function(){
-    return view('auth.signin');
+    if(Auth::check()){
+        return view('auth.signin');
+    }else{
+        return redirect()->route('account.dashboard');
+    }
 })->name('getSignin');
 
 Route::get('/auth/signup', function(){
@@ -132,4 +136,10 @@ Route::get('/viewknowledge/{id}',[
 ]);
 
 Route::post('/', 'PagesController@launch');
+
+Route::get('/overview', [
+    'as' => 'account.overview',
+    'uses' => 'PagesController@overview',
+    'middleware' => 'auth'
+]);
 

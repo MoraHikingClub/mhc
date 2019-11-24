@@ -17,7 +17,7 @@
             @foreach($members as $member)
             @if($member->name != '')
                 @if($i%2==0)
-                <div class="row" style="height: 140px;">
+                <div class="row">
                 @endif
                     <div class="col-md-1">
                         <div class="members-circular">

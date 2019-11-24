@@ -111,67 +111,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/scroll-entrance.js') }}"></script>
-    <header>
-        <div class="agile-banner_nav">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="navbar-container container-fluid">
-                    <a class="navbar-brand logo" href="/"><img src="{{ asset('images/logo.png') }}" alt=""
-                            class="d-inline-block" /></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="dropdown nav-item {{ Request::segment(1) === 'about' ? 'active' : '' }}">
-                                <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">About Us
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu agile_short_drop_down">
-                                    <li>
-                                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="{{ route('commitee') }}">Commitee</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="{{ route('members') }}">Members</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item {{ Request::segment(1) === 'blog' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('blog') }}">Blog</a>
-                            </li>
-                            <li class="nav-item {{ Request::segment(1) === 'news' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('posts.news') }}">News</a>
-                            </li>
-                            <!--li class="nav-item {{ request::segment(1) === 'trails' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('trails') }}">Trails</a>
-                            </li-->
-                            <li class="nav-item {{ request::segment(1) === 'knowledge' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('knowledge.index') }}">Knowledge</a>
-                            </li>
-                            <li class="nav-item {{ Request::segment(1) === 'gallery' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('gallery') }}">Memories</a>
-                            </li>
-                            <li class="nav-item {{ Request::segment(1) === 'contact' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
-                            </li>
-                            @if(Auth::check())
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('account.dashboard') }}"><i class="fa fa-sign-in"></i></a>
-                            </li>
-                            @endif
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
     <div class="loader-bg">
         @php
             $launch = isset($launch) ? $launch : '';
@@ -211,26 +150,6 @@
     @yield('content')
 
     @yield('script')
-
-    <!-- fixed header/ opaque on scroll -->
-    
-
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                var h = $(window).scrollTop();
-
-                if (h > 500) {
-                    $('header',).addClass('fixedheader');
-                    $('.dropdown-menu').css('background','rgba(0,0,0,0.7)');
-                } else {
-                    $('header').removeClass('fixedheader');
-                    $('.dropdown-menu').css('background','rgba(0,0,0,0.5)')
-                }
-            });
-        });
-
-    </script>
 </body>
 
 </html>

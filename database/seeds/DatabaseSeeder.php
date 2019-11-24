@@ -1,6 +1,7 @@
 <?php
 
 use App\Launch;
+use App\role;
 use App\User;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        
+        $this->call(RolesTableSeeder::class);
+
+        $this->command->info('Roles table seeded!');
+
         $this->call(UserTableSeeder::class);
 
         $this->command->info('User table seeded!');
@@ -74,8 +80,21 @@ class UserTableSeeder extends Seeder
         $user->injury = 'No';
         $user->longterm_med_issue = 'No';
         $user->medicine = 'No';
+        $user->role_id = 1;
         $user->api_token = sha1(time());
 
         $user->save();
+    }
+}
+
+class RolesTableSeeder extends Seeder
+{
+    public function run(){
+        $roles = ['Administrator','Editor','Member'];
+        foreach($roles as $role){
+            $new_role = new role();
+            $new_role->role = $role;
+            $new_role->save();
+        }
     }
 }
