@@ -24,8 +24,11 @@ Mora Hiking Club | Sign up
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-6">
-                                    {{ Form::label('fname', 'First Name') }}
+                                    <div class="form-group">
                                     {{ Form::text('fname', null, ['class' => 'form-control', 'required' => '']) }}
+                                    {{ Form::label('fname', 'First Name', ['class' => 'control-label']) }}
+                                    <i class="bar"></i>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
                                     {{ Form::label('lname', 'Last Name') }}

@@ -111,19 +111,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/scroll-entrance.js') }}"></script>
-    <header>
-        <div class="agile-banner_nav">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="navbar-container container-fluid">
-                    <a class="navbar-brand logo" href="/"><img src="{{ asset('images/logo.png') }}" alt=""
+    <header class="_mhc ">
+        <div class="_mhc agile-banner_nav">
+            <nav class="_mhc navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="_mhc navbar-container container-fluid">
+                    <a class="_mhc navbar-brand logo" href="/"><img src="{{ asset('images/logo.png') }}" alt=""
                             class="d-inline-block" /></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    <button class="_mhc navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="_mhc navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                        <ul class="navbar-nav ml-auto">
+                    <div class="_mhc collapse navbar-collapse justify-content-center" id="navbarContent">
+                        <ul class="_mhc navbar-nav ml-auto">
                             <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                             </li>

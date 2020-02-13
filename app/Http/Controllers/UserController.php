@@ -123,7 +123,7 @@ class UserController extends Controller
                 'api_token' => Auth::user()->api_token
             ], 200);
         }else{
-            return response()->json('Unathorized',401);
+            return response()->json('Unauthorized',401);
         }
     }
 

@@ -184,13 +184,16 @@ Mora Hiking Club | Overview
                     Recent albums
                 </div>
                 <div class="card-body">
-                    @if(count($news)<1) <div class="card-title">
+                    @if(count($albums)<1) <div class="card-title">
                         No albums yet.
                 </div>
                 <div class="card-text">
                     <a href="{{ route('albums.create') }}">Create new album</a>
                 </div>
                 @else
+                @php
+                    $i=0;
+                @endphp
                 <table class="table">
                     <thead>
                         <th>#</th>

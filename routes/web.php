@@ -93,7 +93,7 @@ Route::get('/list/news',[
 ]);
 
 Route::get('/auth/signin', function(){
-    if(Auth::check()){
+    if(!Auth::check()){
         return view('auth.signin');
     }else{
         return redirect()->route('account.dashboard');
@@ -101,8 +101,8 @@ Route::get('/auth/signin', function(){
 })->name('getSignin');
 
 Route::get('/auth/signup', function(){
-    //return view('auth.signup');
-    return redirect()->route('index');
+    return view('auth.signup');
+    //return redirect()->route('index');
 })->name('getSignup');
 
 Route::post('/auth/signup', 'UserController@SignUp')->name('signup');
