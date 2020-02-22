@@ -109,9 +109,11 @@ Route::post('/auth/signup', 'UserController@SignUp')->name('signup');
 Route::post('/auth/signin', 'UserController@SignIn')->name('signin');
 Route::get('/auth/signout', 'UserController@SignOut')->name('signout');
 
-Route::get('/home', [
-    'as' => 'account.home',
-    'uses' => 'PagesController@getHome',
+
+//Account routes
+Route::get('/account', [
+    'as' => 'account.account',
+    'uses' => 'PagesController@getAccount',
     'middleware' => 'auth'
 ]);
 Route::get('/dashboard', [
@@ -120,6 +122,20 @@ Route::get('/dashboard', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/account/edit', [
+    'as' => 'account.edit',
+    'uses' => 'PagesController@getAccountEdit',
+    'middleware' => 'auth'
+]);
+
+Route::put('/account/update', [
+    'as' => 'account.update',
+    'uses' => 'UserController@updateUser',
+    'middleware' => 'auth'
+]);
+
+
+//knowledge routes
 Route::resource('knowledge','KnowledgeController',['middleware' => 'auth', 'except' => 'index']);
 Route::get('/knowledge', [
     'uses' => 'KnowledgeController@index',
@@ -142,4 +158,6 @@ Route::get('/overview', [
     'uses' => 'PagesController@overview',
     'middleware' => 'auth'
 ]);
+
+Route::get('/pdf', 'PagesController@pdf')->name('pdf');
 

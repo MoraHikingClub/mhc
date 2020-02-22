@@ -8,9 +8,9 @@ Mora Hiking Club | Overview
 <div class="post-contain">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 margin-bottom">
                 <div class="card margin-bottom">
-                    <div class="card-header">
+                    <div class="card-header card-header-success">
                         Recent posts
                     </div>
                     <div class="card-body">
@@ -108,9 +108,9 @@ Mora Hiking Club | Overview
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 margin-bottom">
             <div class="card margin-bottom">
-                <div class="card-header">
+                <div class="card-header card-header-success">
                     Recent news
                 </div>
                 <div class="card-body">
@@ -147,9 +147,9 @@ Mora Hiking Club | Overview
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 margin-bottom">
             <div class="card margin-bottom">
-                <div class="card-header">
+                <div class="card-header card-header-success">
                     Recent tags
                 </div>
                 <div class="card-body">
@@ -178,9 +178,9 @@ Mora Hiking Club | Overview
             </div>
         </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 margin-bottom">
             <div class="card margin-bottom">
-                <div class="card-header">
+                <div class="card-header card-header-success">
                     Recent albums
                 </div>
                 <div class="card-body">
@@ -218,9 +218,9 @@ Mora Hiking Club | Overview
     </div>
 </div>
     <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 margin-bottom">
                 <div class="card margin-bottom">
-                    <div class="card-header">
+                    <div class="card-header card-header-success">
                         Recent knowledge cards
                     </div>
                     <div class="card-body">

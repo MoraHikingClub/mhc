@@ -12,7 +12,7 @@ class UserController extends Controller
     public function SignIn(Request $request)
     {
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect()->route('account.dashboard');
+            return redirect()->route('account.account');
         }else{
             Session::flash('error', 'Invalid credintials, Try again');
             return redirect()->back();
@@ -35,15 +35,11 @@ class UserController extends Controller
             'faculty'               => 'required|max:255',
             'degree'                => 'required|max:255',
             'level'                 => 'required|max:6',
-            'mem_cat'               => 'required|max:5',
             'kin_name'              => 'required|max:255',
             'kin_no'                => 'required',
             'kin_address'           => 'required|max:255',
             'blood'                 => 'required|max:3',
             'first_aid'             => 'required|max:255',
-            'med_allergy'           => 'required|max:255',
-            'food_allergy'          => 'required|max:255',
-            'other_allergy'         => 'required|max:255',
             'injury'                => 'required|max:255',
             'longterm_med_issue'    => 'required|max:255',
             'medicine'              => 'required|max:255'
@@ -55,7 +51,7 @@ class UserController extends Controller
         $user->fname = $request->fname;
         $user->lname = $request->lname;
         $user->fullname = $request->fullname;
-        $user->dob =$request->dob;
+        $user->dob =date('Y-m-d', strtotime($request->dob));
         $user->nic_no = $request->nic_no;
         $user->gender = $request->gender;
         $user->contact_no = $request->contact_no;
@@ -69,9 +65,9 @@ class UserController extends Controller
         $user->level = $request->level;
 
         //club details
-        $user->mem_cat = $request->mem_cat;
-        $user->join_date = $request->join_date_m.'/'.$request->join_date_y;
-        $user->skills = join(', ', $request->skills);
+        //$user->mem_cat = $request->mem_cat;
+        //$user->join_date = $request->join_date_m.'/'.$request->join_date_y;
+        $user->skills = join('/', $request->skills);
         $user->bio = $request->bio;
         $user->fb_url = $request->fb_url;
         $user->insta_url = $request->insta_url;
@@ -90,9 +86,9 @@ class UserController extends Controller
         //medical details
         $user->blood = $request->blood;
         $user->first_aid = $request->first_aid;
-        $user->med_allergy = $request->med_allergy;
-        $user->food_allergy = $request->food_allergy;
-        $user->other_allergy = $request->other_allergy;
+        // $user->med_allergy = $request->med_allergy;
+        // $user->food_allergy = $request->food_allergy;
+        // $user->other_allergy = $request->other_allergy;
         $user->injury = $request->injury;
         $user->longterm_med_issue = $request->longterm_med_issue;
         $user->medicine = $request->medicine;
@@ -101,9 +97,8 @@ class UserController extends Controller
         $user->save();
 
         Session::flash('success', 'Account have been created successfully');
-
         Auth::login($user);
-        return redirect()->route('account.dashboard');
+        return redirect()->route('account.account');
     }
 
     public function SignOut(){
@@ -111,6 +106,84 @@ class UserController extends Controller
         Session::flash('success', 'You have logged out successfully.');
 
         return redirect()->route('signin');
+    }
+
+    public function updateUser(Request $request){
+        $this->validate($request, [
+            'fname'                 => 'required|max:255',
+            'lname'                 => 'required|max:255',
+            'fullname'              => 'required|max:255',
+            'dob'                   => 'required|date',
+            'nic_no'                => 'required',
+            'gender'                => 'required|max:6',
+            'contact_no'            => 'required',
+            'email'                 => 'required|email',
+            'uni_reg_no'            => 'required|max:7',
+            'faculty'               => 'required|max:255',
+            'degree'                => 'required|max:255',
+            'level'                 => 'required|max:6',
+            'kin_name'              => 'required|max:255',
+            'kin_no'                => 'required',
+            'kin_address'           => 'required|max:255',
+            'blood'                 => 'required|max:3',
+            'first_aid'             => 'required|max:255',
+            'injury'                => 'required|max:255',
+            'longterm_med_issue'    => 'required|max:255',
+            'medicine'              => 'required|max:255'
+        ]);
+
+        $user = User::find(Auth::user()->id);
+        //personal details
+        $user->fname = $request->fname;
+        $user->lname = $request->lname;
+        $user->fullname = $request->fullname;
+        $user->dob = date('Y-m-d', strtotime($request->dob));
+        $user->nic_no = $request->nic_no;
+        $user->gender = $request->gender;
+        $user->contact_no = $request->contact_no;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+
+        //university details
+        $user->uni_reg_no = $request->uni_reg_no;
+        $user->faculty = $request->faculty;
+        $user->degree = $request->degree;
+        $user->level = $request->level;
+
+        //club details
+        //$user->mem_cat = $request->mem_cat;
+        //$user->join_date = $request->join_date_m.'/'.$request->join_date_y;
+        $user->skills = join('/', $request->skills);
+        $user->bio = $request->bio;
+        $user->fb_url = $request->fb_url;
+        $user->insta_url = $request->insta_url;
+
+        //kinship details
+        $user->kin_name = $request->kin_name;
+        if($request->kinship === 'Other'){
+            $user->kinship = $request->kinship1;
+        }else{
+            $user->kinship = $request->kinship;
+        }
+        $user->kin_no = $request->kin_no;
+        $user->kin_no1 = $request->kin_no1;
+        $user->kin_address = $request->kin_address;
+
+        //medical details
+        $user->blood = $request->blood;
+        $user->first_aid = $request->first_aid;
+        // $user->med_allergy = $request->med_allergy;
+        // $user->food_allergy = $request->food_allergy;
+        // $user->other_allergy = $request->other_allergy;
+        $user->injury = $request->injury;
+        $user->longterm_med_issue = $request->longterm_med_issue;
+        $user->medicine = $request->medicine;
+        $user->api_token = sha1(time());
+
+        $user->save();
+
+        return redirect()->route('account.account');
+        
     }
 
     //api functions
@@ -143,15 +216,11 @@ class UserController extends Controller
             'faculty'               => 'required|max:255',
             'degree'                => 'required|max:255',
             'level'                 => 'required|max:6',
-            'mem_cat'               => 'required|max:5',
             'kin_name'              => 'required|max:255',
             'kin_no'                => 'required',
             'kin_address'           => 'required|max:255',
             'blood'                 => 'required|max:3',
             'first_aid'             => 'required|max:255',
-            'med_allergy'           => 'required|max:255',
-            'food_allergy'          => 'required|max:255',
-            'other_allergy'         => 'required|max:255',
             'injury'                => 'required|max:255',
             'longterm_med_issue'    => 'required|max:255',
             'medicine'              => 'required|max:255'
@@ -163,7 +232,7 @@ class UserController extends Controller
         $user->fname = $request->fname;
         $user->lname = $request->lname;
         $user->fullname = $request->fullname;
-        $user->dob =$request->dob;
+        $user->dob = date('Y-m-d', strtotime($request->dob));
         $user->nic_no = $request->nic_no;
         $user->gender = $request->gender;
         $user->contact_no = $request->contact_no;

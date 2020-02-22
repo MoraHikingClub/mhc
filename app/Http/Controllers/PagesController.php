@@ -12,6 +12,8 @@ use App\User;
 use Mail;
 use Session;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\App;
 
 class PagesController extends Controller
 {
@@ -50,12 +52,19 @@ class PagesController extends Controller
         return view('news.single')->with('news', $news);
     }
 
-    public function getHome(){
-        return view('account.home');
+    public function getAccount(){
+        return view('account.account');
+    }
+
+    public function getAccountEdit(){
+        return view('account.edit');
     }
 
     public function getDashboard(){
-        return view('account.dashboard')->with('user',Auth::user());
+        if(Auth::user()->role_id!=3)
+            return view('account.dashboard')->with('user',Auth::user());
+        else
+            return redirect()->route('account.account');
     }
 
     public function getSingleTag($name){
@@ -109,6 +118,72 @@ class PagesController extends Controller
         }else{
             return view('account.overview')->with('posts',$posts)->with('albums',$albums)->with('tags',$tags)->with('news',$news)->with('knowledges',$knowledges);
         }
+    }
+
+    public function pdf(){
+        $pdf = App::make('dompdf.wrapper');
+        $user = Auth::user();
+        if($user->kin_no1){
+            $kin_number = '<tr><td>Contact no.</td><td>: <span style="border-bottom: 1px dotted;">'.$user->kin_no.'</span></td><td>Contact no.(Optional)</td><td>: <span style="border-bottom: 1px dotted;">'.$user->kin_no1.'</span></td></tr>';
+        }else{
+            $kin_number = '<tr><td>Contact no.</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->kin_no.'</span></td></tr>';
+        }
+        
+        $pdf->loadHTML('
+        
+            <div style="font-family: \'Helvetica\', \'Arial\', sans-serif;"><center><h1>MORA Hiking Club</h1>
+            <h3>University of Moratuwa</h3>
+            <h2>Membership Form</h2></center>
+        
+            For office use only<br>
+            '.str_pad($user->id, 4, '0', STR_PAD_LEFT).'
+            
+            <hr>
+            <div class="col" style="background: #000;color:#fff;"><h4>Personal information</h4></div>
+                <table width="100%">
+                    <tr><td width="150px">Firstname</td><td >: <span style="border-bottom: 1px dotted;">'.$user->fname.'</span></td><td width="150px">Lastname</td><td>: <span style="border-bottom: 1px dotted;">'.$user->lname.'</span></td></tr>
+                    <tr><td>Fullname</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->fullname.'</span></td></tr>
+                    <tr><td>Date of birth</td><td>: <span style="border-bottom: 1px dotted;">'.$user->dob.'</span></td><td>NIC No</td><td>: <span style="border-bottom: 1px dotted;">'.$user->nic_no.'</span></td></tr>
+                    <tr><td>Gender</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->gender.'</span></td></tr>
+                    <tr><td>Contact no.</td><td>: <span style="border-bottom: 1px dotted;">'.$user->contact_no.'</span></td><td>Email address</td><td>: <span style="border-bottom: 1px dotted;">'.$user->email.'</span></td>
+                </table>
+            <div class="col" style="background: #000;color:#fff;"><h4>University details</h4></div>
+                <table>
+                    <tr><td>University registration no.</td><td>: <span style="border-bottom: 1px dotted;">'.$user->uni_reg_no.'</td></tr>
+                    <tr><td>Faculty</td><td>: <span style="border-bottom: 1px dotted;">'.$user->faculty.'</span></td></tr>
+                    <tr><td>Department</td><td>: <span style="border-bottom: 1px dotted;">'.$user->degree.'</span></td></tr>
+                    <tr><td>Level</td><td>: <span style="border-bottom: 1px dotted;">Level'.$user->level.'</span></td></tr>
+                </table>
+            <div class="col" style="background: #000;color:#fff;"><h4>Additional details</h4></div>
+                <table>
+                    <tr><td>Next of Kin</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->kin_name.'</span></td></tr>
+                    <tr><td>Kinship</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->kinship.'</span></td></tr>'.$kin_number.'
+                    <tr><td>Address</td><td colspan="3">: <span style="border-bottom: 1px dotted;">'.$user->kin_address.'</span></td><tr>
+                </table>
+            
+            <div class="col" style="background: #000;color:#fff;"><h4>Termination of Membership</h4></div>
+            <p>No-confidence motion; If the trust of the members on a certain official or a law abiding person
+            or the office bearers is breached, a no-confidence motion should be brought forward at the
+            general meeting which is to be held after one week and if approved by the majority of votes
+            of total registered members, it is considered that the office bearer/s is/are terminated.</p>
+            <p>Resignation from the Association; if any member needs to resign from the Association, he/she
+            can do so after informing the Secretary through a letter.</p>
+            <hr>
+            <div class="page-break"></div>
+            <p>I hereby agree to the Conditions and Terms of the club and certify that all information
+            provided above are true and correct.</p>
+            
+            <table width="100%">
+                <tr><td style="text-align:center;">..................................................</td><td style="text-align:center;">..................................................</td></tr>
+                <tr><td style="text-align:center;">Date</td><td style="text-align:center;">Signature</td></tr>
+            </table></div><style>
+            .page-break {
+                page-break-after: always;
+            }
+            </style>
+           ');
+        return $pdf->download('Registration form.pdf');
+
     }
 }
 

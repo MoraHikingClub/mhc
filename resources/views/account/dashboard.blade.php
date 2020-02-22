@@ -188,12 +188,20 @@
             </div>
 
             <ul class="list-unstyled components">
+                <li>
+                    <a href="{{ route('account.account') }}">Back to Yo-Yo</a>
+                </li>
+                <li>
+                    <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
+                </li>
+                    
                 <li class="active">
                     <a href="{{ route('account.overview') }}" target="admin-frame">Overview</a>
                 </li>
                 <li>
                     <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
                 </li>
+                @if(Auth::user()->role_id==1 || Auth::user()->role_id==2)
                 <li>
                     <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Blog
                         posts</a>
@@ -246,11 +254,12 @@
                         </li>
                     </ul>
                 </li>
+                @endif
                 <li>
                     <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
                 </li>
                 <!--li>
-                    <a href="{{ route('account.home') }}" target="admin-frame">Users</a>
+                    <a href="{{ route('account.account') }}" target="admin-frame">Users</a>
                 </li-->
             </ul>
         </nav>

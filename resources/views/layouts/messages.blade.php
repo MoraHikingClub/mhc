@@ -2,7 +2,13 @@
 <div class="container">
     <div class="post-contain">
         <div class="alert alert-{{ Session::has('success') ? 'success' : 'danger' }}" role="alert">
-            <strong>{{ Session::has('success') ? 'Success:' : 'Error' }}</strong> {{ Session::has('success') ? Session::get('success') : Session::get('error') }}
+            <div class="alert-icon">
+                <i class="material-icons">check</i>
+              </div>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="material-icons">clear</i></span>
+              </button>
+            <b>{{ Session::has('success') ? 'Success:' : 'Error' }}</b> {{ Session::has('success') ? Session::get('success') : Session::get('error') }}
         </div>
     </div>
 </div>
@@ -12,7 +18,13 @@
 <div class="container">
     <div class="post-contain">
         <div class="alert alert-danger" role="alert">
-            <strong>Errors:</strong>
+            <div class="alert-icon">
+                <i class="material-icons">error_outline</i>
+              </div>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="material-icons">clear</i></span>
+              </button>
+            <b>Errors:</b>
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error}}</li>

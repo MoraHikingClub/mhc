@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-social')
 
 @section('title')
 Mora Hiking Club | Sign up
@@ -12,100 +12,114 @@ Mora Hiking Club | Sign up
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-title card-top text-center">
-                            <h4>Mora Hiking Club | Signup</h4>
+                    <div class="card" style="padding-left: 10px;padding-right: 10px;">
+                        <div class="card-header card-header-success">
+                            <div class="card-text">
+                                <div class="text-center">
+                                    <h4 class="card-title">Mora Hiking Club | Signup</h4>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             {!! Form::open(['route' => 'signup']) !!}
-                            <div class="form-row">
-                                <h5>Personal details</h5>
+                            <div class="row">
+                                <h4>Personal details</h4>
                                 <!--Personal Details-->
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
+                            <div class="row">
+                                <div class="form-group bmd-form-group col-sm-6 padding-left-none">
+                                    {{ Form::label('fname', 'First Name', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('fname', null, ['class' => 'form-control', 'required' => '']) }}
-                                    {{ Form::label('fname', 'First Name', ['class' => 'control-label']) }}
-                                    <i class="bar"></i>
-                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    {{ Form::label('lname', 'Last Name') }}
+                                <div class="form-group bmd-form-group col-sm-6 padding-left-none">
+                                    {{ Form::label('lname', 'Last Name', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('lname', null, ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-12">
-                                    {{ Form::label('fullname', 'Full Name') }}
+                            <div class="row">
+                                <div class="form-group bmd-form-group col-sm-12 padding-left-none">
+                                    {{ Form::label('fullname', 'Full Name', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('fullname', null, ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-4">
-                                    {{ Form::label('dob', 'Date of Birth') }}<br>
-                                    {{ Form::date('dob', \Carbon\Carbon::now(), ['class' => 'form-control']) }}
+                            <div class="row">
+                                <div class="form-group bmd-form-group col-sm-4 padding-left-none" id="datepicker">
+                                    {{ Form::label('dob', 'Date of Birth', ['class' => 'bmd-label-floating']) }}
+                                    {{ Form::text('dob', null, ['class' => 'form-control datetimepicker']) }}
+                                </div>
+                                <div class="form-group bmd-form-group col-sm-4 padding-left-none">
+                                    {{ Form::label('nic_no', 'National ID Card No.', ['class' => 'bmd-label-floating']) }}
+                                    {{ Form::text('nic_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '10', 'maxlength' => '12']) }}  
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::label('nic_no', 'National ID Card No.') }}
-                                    {{ Form::text('nic_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '10', 'maxlength' => '12']) }}
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="row">
-                                        <div class="col-sm-3 offset-sm-1">
-                                            {{ Form::label('gender', 'Gender') }}
+                                    <div class="form-group">
+                                        {{ Form::label('gender', 'Gender') }}<br>
+                                        <div class="form-check form-check-radio form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="gender" value="Male"> Male
+                                                <span class="circle">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
                                         </div>
-                                    </div>
-                                    <div class="row margin-bottom-low">
-                                        <div class="col-sm-4 offset-sm-1">
-                                            {{ Form::radio('gender', 'Male') }}{{ Form::label('gender', 'Male') }}
-                                        </div>
-                                        <div class="col-sm-5">
-                                            {{ Form::radio('gender', 'Female') }}{{ Form::label('gender', 'Female') }}
+                                        <div class="form-check form-check-radio form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="gender" value="Female"> Female
+                                                <span class="circle">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom">
-                                <div class="col-sm-4">
-                                    {{ Form::label('contact_no', 'Contact No.') }}
+                            <div class="row margin-bottom">
+                                <div class="form-group bmd-form-group padding-left-none col-sm-4">
+                                    {{ Form::label('contact_no', 'Contact No.', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('contact_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '10', 'maxlength' => '10'])}}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <h5>Account Details</h5>
+                            <div class="row">
+                                <h4>Account Details</h4>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-12">
-                                    {{ Form::label('email', 'Email') }}
+                            <div class="row">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none ">
+                                    {{ Form::label('email', 'Email', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('email', null, ['class' => 'form-control', 'required' => '', 'maxlength' => '255']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom">
-                                <div class="col-sm-6">
-                                    {{ Form::label('password', 'Password') }}
+                            <div class="row margin-bottom">
+                                <div class="col-sm-6 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('password', 'Password', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::password('password', ['class' => 'form-control', 'required' => '', 'minlength' => '8', 'maxlength' => '60']) }}
                                 </div>
-                                <div class="col-sm-6">
-                                    {{ Form::label('confirm', 'Confirm Password') }}
+                                <div class="col-sm-6 form-group bmd-form-group padding-left-none" id="confirm-pass">
+                                    {{ Form::label('confirm', 'Confirm Password', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::password('confirm', ['class' => 'form-control', 'required' => '', 'minlength' => '8', 'maxlength' => '60']) }}
+                                    <span class="form-control-feedback"></span>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <h5>University Details</h5>
+                            <div class="row">
+                                <h4>University Details</h4>
                                 <!--University Details-->
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-6 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('uni_reg_no', 'University Registration No.',['class'=>'bmd-label-floating']) }}
+                                    {{ Form::text('uni_reg_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '7', 'maxlength' => '7']) }}
+                                </div>
+                            </div>
+                            <div class="row margin-bottom">
+                                <div class="col-sm-4 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('faculty', 'Faculty') }}
                                     {{ Form::select('faculty', [
                                         'Architecture'              => 'Faculty of Architecture', 
                                         'Business'                  => 'Faculty of Business', 
                                         'Engineering'               => 'Faculty of Engineering', 
                                         'Information Technology'    => 'Faculty of Information Technology'
-                                        ], null, ['class' => 'form-control', 'required' => '', 'placeholder' => '']) }}
+                                        ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-5 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('degree', 'Degree program') }}
                                     {{ Form::select('degree', [
                                         'Architecture'                                  => 'Architecture',
@@ -122,7 +136,7 @@ Mora Hiking Club | Sign up
                                         'Electronic and Telecommunication Engineering'  => 'Electronic and Telecommunication Engineering',
                                         'Material Science Engineering'                  => 'Material Science Engineering',
                                         'Mechanical Engineering'                        => 'Mechanical Engineering',
-                                        'Engineering(Common)'                           => 'Engineering(Common)',
+                                        'Engineering(Common/MPR)'                           => 'Engineering(Common)',
                                         'Engineering(Earth Resource Management)'        => 'Engineering(Earth Resource Management)',
                                         'Engineering(Textile and Clothing Management)'  => 'Engineering(Textile and Clothing Management)',
                                         'Transport and Logistics Management'            => 'Transport and Logistics Management',
@@ -130,15 +144,9 @@ Mora Hiking Club | Sign up
                                         'Information Technology and Management'         => 'Information Technology and Management',
                                         'Business Science'                              => 'Business Science',
                                         'Other'                                         => 'Other'
-                                        ], null, ['class' => 'form-control', 'required' => '', 'placeholder' => '']) }}
+                                        ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
-                            </div>
-                            <div class="form-row margin-bottom">
-                                <div class="col-sm-6">
-                                    {{ Form::label('uni_reg_no', 'University Registration No.') }}
-                                    {{ Form::text('uni_reg_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '7', 'maxlength' => '7']) }}
-                                </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-3 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('level', 'Level') }}
                                     {{ Form::select('level', [
                                         '1' => 'Level 1',
@@ -146,15 +154,15 @@ Mora Hiking Club | Sign up
                                         '3' => 'Level 3',
                                         '4' => 'Level 4',
                                         '5' => 'Level 5' 
-                                        ], null, ['class' => 'form-control', 'required' => '', 'placeholder' => '']) }}
+                                        ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <h5>Club Details</h5>
+                            <div class="row">
+                                <h4>Club Details</h4>
                                 <!--Club Details-->
                             </div>
-                            <div class="form-row margin-bottom-low">
-                                <div class="col-sm-6">
+                            <div class="row margin-bottom-low">
+                                {{-- <div class="col-sm-6">
                                     {{ Form::label('mem_cat', 'Membership Category') }}
                                     {{ Form::select('mem_cat', [
                                         '1' => '1 year',
@@ -163,8 +171,8 @@ Mora Hiking Club | Sign up
                                         '4' => '4 years',
                                         '5' => '5 years'
                                         ], null, ['class' => 'form-control', 'required' => '']) }}
-                                </div>
-                                <div class="col-sm-6">
+                                </div> --}}
+                                {{-- <div class="col-sm-6">
                                     <div class="row">
                                         <div class="col">
                                             {{ Form::label('join_date', 'Joined Date(Approximately)') }}
@@ -178,60 +186,154 @@ Mora Hiking Club | Sign up
                                             {{ Form::text('join_date_y', null, ['class' => 'form-control', 'maxlength' => '4', 'placeholder' => 'Year']) }}
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-12">
                                     {{ Form::label('skills[]', 'Skills') }}
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Photography', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Photography') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Photography', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Photography
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Videography', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Videography') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Videography', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Videography
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Photo Editing', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Photo Editing') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Photo Editing', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Photo Editing
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Video Editing', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Video Editing') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Video Editing', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Video Editing
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'First Aid', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'First Aid') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'First Aid', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} First Aid
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Article Writing', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Article Writing') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Article Writing', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Article Writing
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Sponsorship Hunting', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Sponsorship Hunting') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Sponsorship Hunting', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Sponsorship Hunting
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Fund Raising', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Fund Raising') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Fund Raising', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Fund Raising
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Event Planning', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Event Planning') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Event Planning', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Event Planning
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-4">
-                                    {{ Form::checkbox('skills[]', 'Risk Management', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Risk Management') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Risk Management', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Risk Management
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-8">
-                                    {{ Form::checkbox('skills[]', 'Designing(Photoshop, Coraldraw, Illustrator)', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Designing(Photoshop, Coraldraw, Illustrator)') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Designing(Photoshop, Coraldraw, Illustrator)', null, ['class' => 'form-check-input' , 'id' => 'skills']) }} Designing(Photoshop, Coraldraw, Illustrator)
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
-                                    {{ Form::checkbox('skills[]', 'Web Designing and Development(HTML, PHP, CSS, JS)', null, ['class' => 'checkbox' , 'id' => 'skills']) }}{{ Form::label('skills', 'Web Designing and Development(HTML, PHP, CSS, JS)') }}
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            {{ Form::checkbox('skills[]', 'Web Designing and Development(HTML, PHP, CSS, JS)', null, ['class' => 'form-check-input' , 'id' => 'skills']) }}Web Designing and Development(HTML, PHP, CSS, JS)
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
                                     {{ Form::label('bio', 'Bio') }}
 
@@ -243,7 +345,7 @@ Mora Hiking Club | Sign up
                                     {{ Form::textarea('bio', null, ['class' => 'form-control', 'minlength' => '100', 'rows' => '7']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
                                     {{ Form::label('fb_url', 'Facebook Url') }}
 
@@ -253,7 +355,7 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('fb_url', null, ['class' => 'form-control', 'placeholder' => 'Copy your facebook profile url here...']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom">
+                            <div class="row margin-bottom">
                                 <div class="col-sm-12">
                                     {{ Form::label('insta_url', 'Instagram Url') }}
 
@@ -263,37 +365,62 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('insta_url', null, ['class' => 'form-control', 'placeholder' => 'Copy your instagram profile url here...']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <h5>Additional Details</h5>
+                            <div class="row">
+                                <h4>Additional Details</h4>
                                 <!--Additional Details-->
+                            </div>
+                            <div class="row">
                                 <p class="description margin-bottom-low">We need following information to take necessary
                                     actions in an emergency situation.</p>
                                 <p class="description margin-bottom-low">Make sure about the accuracy of information
                                     that you are providing</p>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-12">
-                                    {{ Form::label('kin_name', 'Next of Kin') }}
+                            <div class="row">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('kin_name', 'Next of Kin',['class'=>'bmd-label-floating']) }}
                                     {{ Form::text('kin_name', null, ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('kinship', 'Kinship') }}
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            {{ Form::radio('kinship', 'Father') }}{{ Form::label('Father','Father') }}
+                                            <div class="form-check form-check-radio">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="kinship" value="Father">
+                                                    Father
+                                                    <span class="circle">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            {{ Form::radio('kinship', 'Mother') }}{{ Form::label('Mother','Mother') }}
+                                            <div class="form-check form-check-radio">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="kinship" value="Mother">
+                                                    Mother
+                                                    <span class="circle">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            {{ Form::radio('kinship', 'Other') }}{{ Form::label('Other','Other') }}
+                                            <div class="form-check form-check-radio">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="kinship" value="Other">
+                                                    Other
+                                                    <span class="circle">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -303,28 +430,28 @@ Mora Hiking Club | Sign up
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    {{ Form::label('kin_no', 'Contact No.') }}
+                            <div class="row">
+                                <div class="col-sm-6 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('kin_no', 'Contact No.',['class'=>'bmd-label-floating']) }}
                                     {{ Form::text('kin_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '10', 'maxlength' => '10']) }}
                                 </div>
-                                <div class="col-sm-6">
-                                    {{ Form::label('kin_no1', 'Contact No.(Optional)') }}
+                                <div class="col-sm-6 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('kin_no1', 'Contact No.(Optional)',['class'=>'bmd-label-floating']) }}
                                     {{ Form::text('kin_no1', null, ['class' => 'form-control', 'minlength' => '10', 'maxlength' => '10']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom">
-                                <div class="col-sm-12">
-                                    {{ Form::label('kin_address', 'Address') }}
+                            <div class="row margin-bottom">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
+                                    {{ Form::label('kin_address', 'Address',['class'=>'bmd-label-floating']) }}
                                     {{ Form::text('kin_address', null, ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <h5>Medical Details</h5>
+                            <div class="row">
+                                <h4>Medical Details</h4>
                                 <!--Medical Details-->
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-3">
+                            <div class="row">
+                                <div class="col-sm-3 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('blood','Blood type') }}
                                     {{ Form::select('blood',[
                                         'A+'    => 'A+',
@@ -338,8 +465,8 @@ Mora Hiking Club | Sign up
                                     ], null, ['class' => 'form-control', 'required' => '', 'placeholder' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
-                                <div class="col-sm-12">
+                            <div class="row margin-bottom-low">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('first_aid','Skills in first aid') }}
 
                                     <p class="description margin-bottom-low">If you have any kind of knowledge about
@@ -347,21 +474,21 @@ Mora Hiking Club | Sign up
                                         mention them in here.</p>
                                     <p class="description">**If there is nothing to say please put 'No'</p>
 
-                                    {{ Form::textarea('first_aid', 'No', ['class' => 'form-control', 'required' => '' ]) }}
+                                    {{ Form::text('first_aid', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
+                            {{-- <div class="row">
                                 <strong>
                                     Allergies
                                 </strong>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <p class="description margin-bottom-low">If you have any allergies please mention them
                                     all in here.</p>
 
                                 <p class="description">**If there is nothing to say please put 'No'</p>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
                                     {{ Form::label('med_allergy', 'Medicine Allergies')}}
 
@@ -370,7 +497,7 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('med_allergy', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
                                     {{ Form::label('food_allergy', 'Food Allergies')}}
 
@@ -379,7 +506,7 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('food_allergy', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <div class="col-sm-12">
                                     {{ Form::label('other_allergy', 'Other Allergies')}}
 
@@ -389,18 +516,18 @@ Mora Hiking Club | Sign up
 
                                     {{ Form::text('other_allergy', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
-                            </div>
-                            <div class="form-row">
+                            </div> --}}
+                            <div class="row">
                                 <strong>
                                     Special Medical Conditions
                                 </strong>
                             </div>
-                            <div class="form-row margin-bottom-low">
+                            <div class="row margin-bottom-low">
                                 <p class="description margin-bottom-low">If you have any special medical conditions
                                     please mention them all below.</p>
                             </div>
-                            <div class="form-row margin-bottom-low">
-                                <div class="col-sm-12">
+                            <div class="row margin-bottom-low">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('injury', 'Injuries')}}
 
                                     <p class="description">**If there is nothing to say please put 'No'</p>
@@ -408,8 +535,8 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('injury', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom-low">
-                                <div class="col-sm-12">
+                            <div class="row margin-bottom-low">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('longterm_med_issue', 'Long term medical issues')}}
 
                                     <p class="description margin-bottom-low">ex:Asthma, catalepsy etc.</p>
@@ -418,8 +545,8 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('longterm_med_issue', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row margin-bottom">
-                                <div class="col-sm-12">
+                            <div class="row margin-bottom">
+                                <div class="col-sm-12 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('medicine', 'Medicines')}}
 
                                     <p class="description margin-bottom-low">If you use any kind of medications please
@@ -431,7 +558,7 @@ Mora Hiking Club | Sign up
                                     {{ Form::text('medicine', 'No', ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-sm-4">
                                     {{ Form::submit('Submit', ['class' => 'btn btn-success btn-block', 'id' => 'signup-btn', 'disabled' => '']) }}
                                 </div>
@@ -461,16 +588,19 @@ Mora Hiking Club | Sign up
 <script>
     $('#confirm').on('keyup',function(){
         if($('#password').val() == $('#confirm').val()){
-            $('#confirm').addClass('validate-correct');
-            $('#confirm').removeClass('validate-incorrect');
-            $('#signup-btn').prop('disabled', false);
+            $('.form-control-feedback').html('<i class="material-icons">done</i>');
+            $('#confirm-pass').addClass('has-success');
+            $('#confirm-pass').removeClass('has-danger');
         }else{
-            $('#confirm').addClass('validate-incorrect');
-            $('#confirm').removeClass('validate-correct');
-            $('#signup-btn').prop('disabled', true);
+            $('.form-control-feedback').html('<i class="material-icons">clear</i>');
+            $('#confirm-pass').addClass('has-danger');
+            $('#confirm-pass').removeClass('has-success');
         }
     });
 </script>
+@endsection
+
+@section('script1')
 <script>
     $('#bio').on('keyup',function(){
         var x = $('#bio').val().length;
@@ -488,6 +618,30 @@ Mora Hiking Club | Sign up
                 $('#signup-btn').prop('disabled', true);
             }
         });
+</script>
+<script>
+    $('.datetimepicker').datetimepicker({
+    icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-chevron-up",
+        down: "fa fa-chevron-down",
+        previous: 'fa fa-chevron-left',
+        next: 'fa fa-chevron-right',
+        today: 'fa fa-screenshot',
+        clear: 'fa fa-trash',
+        close: 'fa fa-remove'
+    },
+    format:'L'
+})
+</script>
+<script>
+    $('#dob').focusout(function(){
+        if($('#dob').val())
+            $('#datepicker').addClass('is-filled');
+        else
+            $('#datepicker').removeClass('is-filled');
+    });
 </script>
 @endsection
 

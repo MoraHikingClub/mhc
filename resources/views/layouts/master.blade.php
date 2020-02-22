@@ -161,11 +161,9 @@
                             <li class="nav-item {{ Request::segment(1) === 'contact' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                             </li>
-                            @if(Auth::check())
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('account.dashboard') }}"><i class="fa fa-sign-in"></i></a>
+                                <a class="nav-link" href="{{ route('signin') }}"><i class="fa fa-sign-in"></i></a>
                             </li>
-                            @endif
                         </ul>
                     </div>
                 </div>
