@@ -581,11 +581,13 @@ Mora Hiking Club | Yo-Yo | Edit account
                 $('#bio').removeClass('validate-incorrect');
                 $('#charcount').text(0);
                 $('#signup-btn').prop('disabled', false);
+                $('.required').css('color','#4caf50');
             }else{
                 $('#bio').addClass('validate-incorrect');
                 $('#bio').removeClass('validate-correct');
                 $('#charcount').text(100-x);
                 $('#signup-btn').prop('disabled', true);
+                $('.required').css('color','#f44336');
             }
         });
     $(document).ready(function(){
@@ -595,11 +597,13 @@ Mora Hiking Club | Yo-Yo | Edit account
                 $('#bio').removeClass('validate-incorrect');
                 $('#charcount').text(0);
                 $('#signup-btn').prop('disabled', false);
+                $('.required').css('color','#4caf50');
             }else{
                 $('#bio').addClass('validate-incorrect');
                 $('#bio').removeClass('validate-correct');
                 $('#charcount').text(100-x);
                 $('#signup-btn').prop('disabled', true);
+                $('.required').css('color','#f44336');
             }
         });
 </script>

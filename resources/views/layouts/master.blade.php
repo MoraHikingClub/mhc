@@ -162,7 +162,7 @@
                                 <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('signin') }}"><i class="fa fa-sign-in"></i></a>
+                                <a class="nav-link" href="{{ route('signin') }}"><i class="fa fa-sign-in"></i> Sign in</a>
                             </li>
                         </ul>
                     </div>

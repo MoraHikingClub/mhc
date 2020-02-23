@@ -340,7 +340,7 @@ Mora Hiking Club | Sign up
                                     <p class="description margin-bottom-low">Write a short description about you. This
                                         description will figured out in our official(<a href="/">morahiking.com</a>) as
                                         your membership profile.</p>
-                                    <p class="description">Minimum 100 chracters: <span id="charcount">100</span> characters remaining.</p>
+                                    <p class="description required">Minimum 100 chracters: <span id="charcount">100</span> characters remaining.</p>
 
                                     {{ Form::textarea('bio', null, ['class' => 'form-control', 'minlength' => '100', 'rows' => '7']) }}
                                 </div>
@@ -559,6 +559,9 @@ Mora Hiking Club | Sign up
                                 </div>
                             </div>
                             <div class="row">
+                                <p class="description" style="color:#f44336;">*Bio is required for submit your application</p>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-4">
                                     {{ Form::submit('Submit', ['class' => 'btn btn-success btn-block', 'id' => 'signup-btn', 'disabled' => '']) }}
                                 </div>
@@ -611,11 +614,13 @@ Mora Hiking Club | Sign up
                     $('#charcount').text(100-x);
                 }
                 $('#signup-btn').prop('disabled', false);
+                $('.required').css('color','#4caf50');
             }else{
                 $('#bio').addClass('validate-incorrect');
                 $('#bio').removeClass('validate-correct');
                 $('#charcount').text(100-x);
                 $('#signup-btn').prop('disabled', true);
+                $('.required').css('color','#f44336');
             }
         });
 </script>

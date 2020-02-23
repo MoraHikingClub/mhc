@@ -64,20 +64,21 @@
 					<div class="slide">
 						<div class="slide-content">
 							<div class="caption">
-								<!--div class="title">Join with us</div>
+								<div class="title">Join with us</div>
 								<div class="text">
 									<p>"There are no shortcuts to any place worth going."</p>
+									<p>Membership registartion for year 2020 is now OPEN!</p>
 								</div>
 								<a href="{{ route('signup') }}" class="slide-btn">
-									<span class="slide-btn-inner">Join Us</span>
-								</a-->
-								<div class="title">Make the convo</div>
+									<span class="slide-btn-inner">Apply now</span>
+								</a>
+								<!--div class="title">Make the convo</div>
 								<div class="text">
 									<p>"There are no shortcuts to any place worth going."</p>
 								</div>
 								<a href="{{ route('contact') }}" class="slide-btn">
 									<span class="slide-btn-inner">Contact Us</span>
-								</a>
+								</a-->
 							</div>
 						</div>
 						<div class="image-container">
