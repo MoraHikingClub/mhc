@@ -67,7 +67,7 @@ Mora Hiking Club | Pending users
                                     <tr><td>
                                             <form method="post" action="{{ route('admin.activateuser') }}">
                                                 @csrf
-                                                <input type="hidden" name="id" value={{ $user->id }} />
+                                                <input type="hidden" name="id" value="{{ $user->id }}" />
                                                 <button class="btn btn-primary btn-round btn-sm" type="submit">Activate</button>
                                             </form>
                                         </td>
