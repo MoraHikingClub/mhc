@@ -1,14 +1,19 @@
-@if(Session::has('success') )
+@if(Session::has('success'))
 <div class="container">
     <div class="post-contain">
-        <div class="alert alert-{{ Session::has('success') ? 'success' : 'danger' }}" role="alert">
+        <div class="alert alert-{{ Session::has('success') ? 'success' : (Session::has('error') ? 'danger' : '' )}}" role="alert">
             <div class="alert-icon">
-                <i class="material-icons">check</i>
+                @if(Session::has('success'))
+                    <i class="material-icons">check</i>
+                @endif
+                @if(Session::has('error'))
+                    <i class="material-icons">clear</i>
+                @endif
               </div>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true"><i class="material-icons">clear</i></span>
               </button>
-            <b>{{ Session::has('success') ? 'Success:' : 'Error' }}</b> {{ Session::has('success') ? Session::get('success') : Session::get('error') }}
+            <b>{{ Session::has('success') ? 'Success:' : (Session::has('error') ? 'Error' : '') }}</b> {{ Session::has('success') ? Session::get('success') : (Session::has('error') ? Session::get('error') : '') }}
         </div>
     </div>
 </div>

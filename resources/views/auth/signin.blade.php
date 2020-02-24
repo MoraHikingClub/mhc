@@ -76,7 +76,8 @@
 
                                 {{ Form::submit('Sign In', ['class' => 'btn btn-success btn-block'])}}
                                 <div style="margin-top:20px">
-                                    Don't have an account? {!!Html::link('auth/signup','Join us now',['class' => 'text-info']) !!}
+                                    Don't have an account? {!!Html::link(route('signup'),'Join us now',['class' => 'text-info']) !!}<br>
+                                    Forgot your password? {!!Html::link(route('resetpassword.view'),'Reset password',['class' => 'text-info']) !!}
                                 </div>
                                 {!! Form::close() !!}
                             </div>

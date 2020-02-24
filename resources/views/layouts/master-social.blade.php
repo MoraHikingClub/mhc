@@ -148,6 +148,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <h6 class="dropdown-header">Settings</h6>
                             <a href="{{ route('account.edit') }}" class="dropdown-item">Edit account</a>
+                            <a href="{{ route('password.change') }}" class="dropdown-item">Change password</a>
                             <div class="dropdown-divider"></div>
                             <a href="{{ route('signout') }}" class="dropdown-item">Log out</a>
                         </div>

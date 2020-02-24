@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Resetpassword;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Session;
+use Mail;
+use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -184,6 +188,69 @@ class UserController extends Controller
 
         return redirect()->route('account.account');
         
+    }
+
+    public function changePassword(){
+        return view('account.password');
+    }
+
+    public function updatePassword(Request $request){
+        $this->validate($request, [
+            'password' => 'required|max:60|same:confirm'
+            ]);
+
+        if(Hash::check($request->old_password,Auth::user()->password)){
+            $user = Auth::user();
+            $user->password = bcrypt($request->password);
+            $user->save();
+            Session::flash('success', 'You have changed your password successfully.');
+            return redirect()->route('account.account');
+        }else{
+            Session::flash('error', 'Older password do not match, Try again!');
+            return redirect()->back();
+        }
+    }
+
+    public function resetPasswordView(){
+        return view('account.resetpasswordview');
+    }
+
+    public function resetPasswordPost(Request $request){
+        $user = User::where('email',$request->email)->first();
+        if($user){
+            Mail::to($user->email)->send(new Resetpassword($user));
+            Session::flash('success', 'Email has been sent to your email address.');
+            return redirect()->back();
+        }else{
+            Session::flash('error', 'Account not found');
+            return redirect()->back();
+        }
+        
+    }
+
+    public function resetPasswordChange($api){
+        $user = User::where('api_token','=',$api)->first();
+
+        if($user){
+            return view('account.resetpasswordchange')->with('user',$user);
+        }else{
+            return redirect()->route('signin');
+        }
+    }
+
+    public function resetPasswordUpdate(Request $request,$api){
+        $this->validate($request, [
+            'password' => 'required|max:60|same:confirm'
+        ]);
+            
+        $user = User::where('api_token','=',$api)->first();
+        $user->password = bcrypt($request->password);
+        $user->api_token = sha1(time());
+        $user->save();
+        Session::flash('success', 'You have changed your password successfully.');
+        Auth::login($user);
+        return redirect()->route('account.account');
+
     }
 
     //api functions

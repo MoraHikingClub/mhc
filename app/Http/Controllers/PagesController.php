@@ -62,7 +62,7 @@ class PagesController extends Controller
 
     public function getDashboard(){
         if(Auth::user()->role_id!=3)
-            return view('account.dashboard')->with('user',Auth::user());
+            return view('admin.dashboard')->with('user',Auth::user());
         else
             return redirect()->route('account.account');
     }
@@ -114,9 +114,9 @@ class PagesController extends Controller
 
         if(Auth::user()->role_id == 1){
             $users = User::orderBy('id','desc')->take(10)->get();
-            return view('account.overview')->with('posts',$posts)->with('albums',$albums)->with('tags',$tags)->with('news',$news)->with('knowledges',$knowledges)->with('users',$users);
+            return view('admin.overview')->with('posts',$posts)->with('albums',$albums)->with('tags',$tags)->with('news',$news)->with('knowledges',$knowledges)->with('users',$users);
         }else{
-            return view('account.overview')->with('posts',$posts)->with('albums',$albums)->with('tags',$tags)->with('news',$news)->with('knowledges',$knowledges);
+            return view('admin.overview')->with('posts',$posts)->with('albums',$albums)->with('tags',$tags)->with('news',$news)->with('knowledges',$knowledges);
         }
     }
 

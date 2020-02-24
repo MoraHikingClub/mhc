@@ -110,15 +110,33 @@ Route::post('/auth/signin', 'UserController@SignIn')->name('signin');
 Route::get('/auth/signout', 'UserController@SignOut')->name('signout');
 
 
+//routes for reset password
+Route::get('/auth/account/resetpassword', [
+    'as' => 'resetpassword.view',
+    'uses' => 'UserController@resetPasswordView'
+]);
+
+Route::post('/auth/account/resetpassword/post', [
+    'as' => 'resetpassword.post',
+    'uses' => 'UserController@resetPasswordPost'
+]);
+
+Route::get('/auth/account/{api}/changepassword', [
+    'as' => 'resetpassword.change',
+    'uses' => 'UserController@resetPasswordChange'
+]);
+
+Route::post('/auth/account/{api}/changepassword', [
+    'as' => 'resetpassword.update',
+    'uses' => 'UserController@resetPasswordUpdate'
+]);
+
+
+
 //Account routes
 Route::get('/account', [
     'as' => 'account.account',
     'uses' => 'PagesController@getAccount',
-    'middleware' => 'auth'
-]);
-Route::get('/dashboard', [
-    'as' => 'account.dashboard', 
-    'uses' => 'PagesController@getDashboard',
     'middleware' => 'auth'
 ]);
 
@@ -131,6 +149,18 @@ Route::get('/account/edit', [
 Route::put('/account/update', [
     'as' => 'account.update',
     'uses' => 'UserController@updateUser',
+    'middleware' => 'auth'
+]);
+
+Route::get('/account/password/change', [
+    'as' => 'password.change',
+    'uses' => 'UserController@changePassword',
+    'middleware' => 'auth'
+]);
+
+Route::post('/account/password/update', [
+    'as' => 'password.update',
+    'uses' => 'UserController@updatePassword',
     'middleware' => 'auth'
 ]);
 
@@ -153,11 +183,44 @@ Route::get('/viewknowledge/{id}',[
 
 Route::post('/', 'PagesController@launch');
 
+//Admin panel
 Route::get('/overview', [
     'as' => 'account.overview',
     'uses' => 'PagesController@overview',
     'middleware' => 'auth'
 ]);
 
+Route::get('/dashboard', [
+    'as' => 'account.dashboard', 
+    'uses' => 'PagesController@getDashboard',
+    'middleware' => 'auth'
+]);
+
+Route::get('/admin/activeusers', [
+    'as' => 'admin.activeusers',
+    'uses' => 'AdminController@activeUsers',
+    'middleware' => 'auth'
+]);
+
+Route::get('/admin/pendingusers', [
+    'as' => 'admin.pendingusers',
+    'uses' => 'AdminController@pendingUsers',
+    'middleware' => 'auth'
+]);
+
+Route::get('/searchpendingusers',[
+    'as' => 'admin.searchpendingusers',
+    'uses' => 'AdminController@searchPendingUsers'
+]);
+
+Route::get('/searchactiveusers',[
+    'as' => 'admin.searchactiveusers',
+    'uses' => 'AdminController@searchActiveUsers'
+]);
+
 Route::get('/pdf', 'PagesController@pdf')->name('pdf');
 
+Route::post('/admin/activateuser',[
+    'as' => 'admin.activateuser',
+    'uses' => 'AdminController@activateUser'
+]);

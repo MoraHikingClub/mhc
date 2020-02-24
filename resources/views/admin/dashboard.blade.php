@@ -194,14 +194,14 @@
                 <li>
                     <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
                 </li>
-                    
+
+                @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                 <li class="active">
                     <a href="{{ route('account.overview') }}" target="admin-frame">Overview</a>
                 </li>
                 <li>
                     <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
                 </li>
-                @if(Auth::user()->role_id==1 || Auth::user()->role_id==2)
                 <li>
                     <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Blog
                         posts</a>
@@ -255,6 +255,19 @@
                     </ul>
                 </li>
                 @endif
+
+                @if(Auth::user()->role_id==1 || Auth::user()->role_id==4)
+                    <li class="{{ Auth::user()->role_id==4 ? 'active' : '' }}">
+                        <a href="{{ route('admin.activeusers') }}" target="admin-frame">Active Users</a>
+                    </li>
+                @endif
+
+                @if(Auth::user()->role_id==1 || Auth::user()->role_id==5)
+                    <li class="{{ Auth::user()->role_id==4 ? 'active' : '' }}">
+                        <a href="{{ route('admin.pendingusers') }}" target="admin-frame">Pending Users</a>
+                    </li>
+                @endif
+
                 <li>
                     <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
                 </li>
@@ -272,7 +285,7 @@
                     <i class="fas fa-align-justify"></i>
                 </button>
             </div>
-            <iframe name="admin-frame" frameborder="0" src="{{ (Auth::user()->role_id == 3) ? route('account.home') : route('account.overview') }}" class="admin-frame"></iframe>
+            <iframe name="admin-frame" frameborder="0" src="{{ (Auth::user()->role_id == 4) ? route('admin.activeusers') : ((Auth::user()->role_id == 5) ? route('admin.pendingusers') : route('account.overview')) }}" class="admin-frame"></iframe>
         </div>
     </div>
 

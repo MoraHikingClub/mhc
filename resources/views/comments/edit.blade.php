@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@if(!Session::has('success') )
+@if(!Session::has('success'))
 <div class="post-contain">
     @endif
     <div class="container">
@@ -23,7 +23,7 @@
             {{ Form::close() }}
         </div>
     </div>
-@if(!Session::has('success') )
+@if(!Session::has('success'))
 </div>
 @endif
 @endsection

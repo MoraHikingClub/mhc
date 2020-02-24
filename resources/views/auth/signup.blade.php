@@ -84,7 +84,7 @@ Mora Hiking Club | Sign up
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 form-group bmd-form-group padding-left-none ">
-                                    {{ Form::label('email', 'Email', ['class' => 'bmd-label-floating']) }}
+                                    {{ Form::label('email', 'Email address', ['class' => 'bmd-label-floating']) }}
                                     {{ Form::text('email', null, ['class' => 'form-control', 'required' => '', 'maxlength' => '255']) }}
                                 </div>
                             </div>
@@ -116,7 +116,8 @@ Mora Hiking Club | Sign up
                                         'Architecture'              => 'Faculty of Architecture', 
                                         'Business'                  => 'Faculty of Business', 
                                         'Engineering'               => 'Faculty of Engineering', 
-                                        'Information Technology'    => 'Faculty of Information Technology'
+                                        'Information Technology'    => 'Faculty of Information Technology',
+                                        'Institute of Technology(NDT)'    => 'Institute of Technology(NDT)'
                                         ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
                                 <div class="col-sm-5 form-group bmd-form-group padding-left-none">
@@ -143,6 +144,15 @@ Mora Hiking Club | Sign up
                                         'Information Technology'                        => 'Information Technology',
                                         'Information Technology and Management'         => 'Information Technology and Management',
                                         'Business Science'                              => 'Business Science',
+                                        'Civil Engineering Technology(NDT)'             => 'Civil Engineering Technology(NDT)',
+                                        'Chemical Engineering Technology(NDT)'          => 'Chemical Engineering Technology(NDT)',
+                                        'Electrical, Electronic & Telecommunication Engineering Technology(NDT)'=>'Electrical, Electronic & Telecommunication Engineering Technology(NDT)',
+                                        'Information Technology(NDT)'                   => 'Information Technology(NDT)',
+                                        'Marine Technology(NDT)'                        => 'Marine Technology(NDT)',
+                                        'Mechanical Engineering Technology(NDT)'        => 'Mechanical Engineering Technology(NDT)',
+                                        'Nautical Studies(NDT)'                         => 'Nautical Studies(NDT)',
+                                        'Polymer Technology(NDT)'                       => 'Polymer Technology(NDT)',
+                                        'Textile & Clothing Technology(NDT)'            => 'Textile & Clothing Technology(NDT)',
                                         'Other'                                         => 'Other'
                                         ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
