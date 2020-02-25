@@ -29,6 +29,6 @@ class Resetpassword extends Mailable
      */
     public function build()
     {
-        return $this->from('admin@morahiking.com', 'Administrator')->markdown('layouts.mail')->with('user',$this->user);
+        return $this->from('admin@morahiking.com', 'Mora Hiking Club')->markdown('layouts.mail')->with('user',$this->user);
     }
 }
