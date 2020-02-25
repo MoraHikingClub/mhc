@@ -6,7 +6,4 @@
 
     http://morahiking.com/auth/account/{{ $user->api_token }}/changepassword
 
-    @component('mail::button', ['url' => 'http://morahiking.com/auth/account/'.$user->api_token.'/changepassword', 'color' => 'success'])
-    Reset password
-    @endcomponent
 @endcomponent
