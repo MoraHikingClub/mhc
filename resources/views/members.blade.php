@@ -15,24 +15,20 @@
                 $i=0;
             @endphp
             @foreach($members as $member)
-            @if($member->name != '')
+            @if($member->fname != 'Web')
                 @if($i%2==0)
                 <div class="row">
                 @endif
                     <div class="col-md-1">
                         <div class="members-circular">
-                            <img src="{{ ($member->image != '')? $member->image : asset('images/commitee/person.jpg') }}" alt="{{ $member->name }}">
+                            {{-- <img src="{{ ($member->image != '')? $member->image : asset('images/commitee/person.jpg') }}" alt="{{ $member->name }}"> --}}
+                            <img src="{{ $member->gender == 'Male' ? asset('images/avatar/male.jpg') : asset('images/avatar/female.jpg') }}" class="img-fluid rounded-circle">
                         </div>
                     </div>
                     <div class="col-md-5 margin-bottom">
-                        <h5>{{ $member->name }}</h5>
-                        @if($member->dep_fac != '')
-                        @php
-                            $dep_fac = explode('/',$member->dep_fac)
-                        @endphp
-                        <p>{{ $dep_fac[0] }}</p>
-                        <p>{{ $dep_fac[1] }}</p>
-                        @endif
+                        <h5>{{ $member->fname }} {{ $member->lname }}</h5>
+                        <p>Faculty of {{ $member->faculty }}</p>
+                        <p>{{ $member->degree }}</p>
                         <ul class="list-unstyled">
                             @if($member->email != '')
                             <a class="team-social" href="mailto:{{ $member->email }}">
@@ -40,12 +36,12 @@
                             </a>
                             @endif
                             @if($member->fb_link != '')
-                            <a class="team-social" href="{{ $member->fb_link }}">
+                            <a class="team-social" href="{{ $member->fb_url }}">
                                 <i class="fa fa-facebook"></i>
                             </a>
                             @endif
                             @if($member->insta_link)
-                            <a class="team-social" href="{{ $member->insta_link }}">
+                            <a class="team-social" href="{{ $member->insta_url }}">
                                 <i class="fa fa-instagram"></i>
                             </a>
                             @endif
