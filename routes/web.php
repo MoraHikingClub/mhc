@@ -210,17 +210,24 @@ Route::get('/admin/pendingusers', [
 
 Route::get('/searchpendingusers',[
     'as' => 'admin.searchpendingusers',
-    'uses' => 'AdminController@searchPendingUsers'
+    'uses' => 'AdminController@searchPendingUsers',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/searchactiveusers',[
     'as' => 'admin.searchactiveusers',
-    'uses' => 'AdminController@searchActiveUsers'
+    'uses' => 'AdminController@searchActiveUsers',
+    'middleware' => 'auth'
 ]);
 
-Route::get('/pdf', 'PagesController@pdf')->name('pdf');
+Route::get('/pdf', [
+    'as' => 'pdf',
+    'uses' => 'PagesController@pdf',
+    'middleware' => 'auth'
+]);
 
 Route::post('/admin/activateuser',[
     'as' => 'admin.activateuser',
-    'uses' => 'AdminController@activateUser'
+    'uses' => 'AdminController@activateUser',
+    'middleware' => 'auth'
 ]);
