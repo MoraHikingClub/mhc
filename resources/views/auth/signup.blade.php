@@ -633,6 +633,22 @@ Mora Hiking Club | Sign up
                 $('.required').css('color','#f44336');
             }
         });
+        $(document).ready(function(){
+        var x = $('#bio').val().length;
+            if( x > 99){
+                $('#bio').addClass('validate-correct');
+                $('#bio').removeClass('validate-incorrect');
+                $('#charcount').text(0);
+                $('#signup-btn').prop('disabled', false);
+                $('.required').css('color','#4caf50');
+            }else{
+                $('#bio').addClass('validate-incorrect');
+                $('#bio').removeClass('validate-correct');
+                $('#charcount').text(100-x);
+                $('#signup-btn').prop('disabled', true);
+                $('.required').css('color','#f44336');
+            }
+        });
 </script>
 <script>
     $('.datetimepicker').datetimepicker({
