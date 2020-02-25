@@ -182,7 +182,6 @@ Mora Hiking Club | Yo-Yo | Edit account
                             </div>
                             @php
                                 $skills[] = explode('/',$user->skills);
-                                print_r($skills[0]);
                             @endphp
                             <div class="row">
                                 <div class="col-sm-12">
