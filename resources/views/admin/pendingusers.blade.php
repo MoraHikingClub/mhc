@@ -12,7 +12,7 @@ Mora Hiking Club | Pending users
                 <input type="text" name="q" class="form-control" placeholder="Search..." id="search" style="border: 1px solid #ced4da;"/>
             </div>
             <div class="col-md-3">
-                <h3>Next Membership ID : <b>{{ $m_id }}</b></h3>
+                <h3>Next Membership ID : <b><span class="m_id"></span>{{ $m_id }}</b></h3>
             </div>
         </div>
         <div class="row">

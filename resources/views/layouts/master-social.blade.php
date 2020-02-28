@@ -196,6 +196,7 @@
                     <div class="small">
                         Account activation pending
                     </div>
+                    <a href="{{ route('pdf') }}"><button class="btn btn-round btn-danger">Download PDF</button></a>
                 </div>
             </div>
         @endif

@@ -1219,6 +1219,7 @@ p.related-content:hover {
     background: url('../images/members.jpg');
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
     padding-bottom: 50px;
 }
 

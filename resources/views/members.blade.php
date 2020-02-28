@@ -30,17 +30,17 @@
                         <p>Faculty of {{ $member->faculty }}</p>
                         <p>{{ $member->degree }}</p>
                         <ul class="list-unstyled">
-                            @if($member->email != '')
+                            @if($member->email)
                             <a class="team-social" href="mailto:{{ $member->email }}">
                                 <i class="fa fa-envelope"></i>
                             </a>
                             @endif
-                            @if($member->fb_link != '')
+                            @if($member->fb_url)
                             <a class="team-social" href="{{ $member->fb_url }}">
                                 <i class="fa fa-facebook"></i>
                             </a>
                             @endif
-                            @if($member->insta_link)
+                            @if($member->insta_url)
                             <a class="team-social" href="{{ $member->insta_url }}">
                                 <i class="fa fa-instagram"></i>
                             </a>

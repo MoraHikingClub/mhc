@@ -47,7 +47,7 @@ class AdminController extends Controller
                         <td>
                                             <form method="post" action="'.route('admin.activateuser').'">';
                         $output .= csrf_field();
-                        $output .= '<input type="hidden" name="id" value="{{ $user->id }}" />
+                        $output .= '<input type="hidden" name="id" value="'.$user->id.'" />
                                                 <button class="btn btn-primary btn-round btn-sm" type="submit">Activate</button>
                                             </form>
                                         </td>
