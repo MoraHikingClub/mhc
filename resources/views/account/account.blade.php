@@ -172,6 +172,7 @@
                         {{ Form::text('kin_address', $user->kin_address, ['class' => 'form-control', 'disabled' => '']) }}
                     </div>
                 </div>
+                {!! Form::close() !!}
             </div>
     @if(!Session::has('success') )
         </div>
