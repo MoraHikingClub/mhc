@@ -121,7 +121,7 @@
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     @if(Auth::check())
-                        @if(Auth::user()->role_id==1 || Auth::user()->role_id==2)
+                        @if(Auth::user()->role_id==1 || Auth::user()->role_id==2 || Auth::user()->role_id==4 || Auth::user()->role_id==5)
                         <li class="nav-item">
                             <a href="{{ route('account.dashboard') }}" class="nav-link">
                             <i class="material-icons">dashboard</i>Dashboard

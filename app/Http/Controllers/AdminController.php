@@ -11,7 +11,7 @@ class AdminController extends Controller
     public function activeUsers(){
         $users = User::where('activated','=',1)->orderBy('m_id','desc')->get();
 
-        if(Auth::user()->role_id==4 || Auth::user()->role_id==1){
+        if(Auth::user()->role_id==4 || Auth::user()->role_id==5 || Auth::user()->role_id==1){
             return view('admin.activeusers')->with('users',$users);
         }else{
             return redirect()->route('account.account');
@@ -27,7 +27,7 @@ class AdminController extends Controller
         }else{
             $m_id = 200001;
         }
-        if(Auth::user()->role_id==5 || Auth::user()->role_id==1){
+        if(Auth::user()->role_id==4 || Auth::user()->role_id==5 || Auth::user()->role_id==1){
             return view('admin.pendingusers')->with('users',$users)->with('m_id',$m_id);
         }else{
             return redirect()->route('account.account');
