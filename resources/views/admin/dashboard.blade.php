@@ -256,13 +256,13 @@
                 </li>
                 @endif
 
-                @if(Auth::user()->role_id==1 || Auth::user()->role_id==4)
+                @if(Auth::user()->role_id==1 || Auth::user()->role_id==4 || Auth::user()->role_id==5)
                     <li class="{{ Auth::user()->role_id==4 ? 'active' : '' }}">
                         <a href="{{ route('admin.activeusers') }}" target="admin-frame">Active Users</a>
                     </li>
                 @endif
 
-                @if(Auth::user()->role_id==1 || Auth::user()->role_id==5)
+                @if(Auth::user()->role_id==1 || Auth::user()->role_id==4 || Auth::user()->role_id==5)
                     <li class="{{ Auth::user()->role_id==4 ? 'active' : '' }}">
                         <a href="{{ route('admin.pendingusers') }}" target="admin-frame">Pending Users</a>
                     </li>
