@@ -5,10 +5,10 @@ Mora Hiking Club is one of the leading clubs in the University of Moratuwa. As i
 - Laravel
 
 ### Used plugins:
-- TinyMCE (https://www.tiny.cloud/)
-- Select2 (https://select2.org/)
-- Responsive file manager (https://www.responsivefilemanager.com/)
-- domPDF (https://github.com/barryvdh/laravel-dompdf)
+- [TinyMCE](https://www.tiny.cloud/)
+- [Select2](https://select2.org/)
+- [Responsive file manager](https://www.responsivefilemanager.com/)
+- [domPDF](https://github.com/barryvdh/laravel-dompdf)
 
 ### New features:
 #### First release(20th Nov 2019) :-
