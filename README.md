@@ -31,6 +31,7 @@ Mora Hiking Club is one of the leading clubs in the University of Moratuwa. As i
 1. `cd` into the cloned folder
 1. Run `composer update`
 1. Copy __.evn.example__ and rename it to __.env__.
+1. Run `php artisan key:generate`.
 1. Add your mysql database name, username and password in the __.env__ file.
 1. Run `php artisan migrate`.
 1. Run `php artisan serve`
