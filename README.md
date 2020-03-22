@@ -24,3 +24,14 @@ Mora Hiking Club is one of the leading clubs in the University of Moratuwa. As i
 
 #### Future release :-
 - Social Network of members
+
+### Initialize the project
+1. Clone the github project
+1. Install [Composer](http://getcomposer.org) on your computer
+1. `cd` into the cloned folder
+1. Run `composer update`
+1. Copy __.evn.example__ and rename it to __.env__.
+1. Add your mysql database name, username and password in the __.env__ file.
+1. Run `php artisan migrate`.
+1. Run `php artisan serve`
+1. Navigate to http://localhost:8080 through your browser.
