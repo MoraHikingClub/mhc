@@ -151,7 +151,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-						<p>{{ substr(strip_tags($post->body), 0, 500) }}{{ strlen(strip_tags($post->body))>500 ? '...' : '' }}</p>
+						<p>{!! substr(strip_tags($post->body), 0, 500) !!}{{ strlen(strip_tags($post->body))>500 ? '...' : '' }}</p>
 							<a href="{{ route('blog') }}" class="slide-btn">
 								<span class="slide-btn-inner">Learn more</span>
 							</a>
