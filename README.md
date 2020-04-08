@@ -36,3 +36,10 @@ Mora Hiking Club is one of the leading clubs in the University of Moratuwa. As i
 1. Run `php artisan migrate`.
 1. Run `php artisan serve`
 1. Navigate to http://localhost:8080 through your browser.
+
+### Issues
+
+1. thumbs upload
+- include 'mime_type_lib.php' in 'php_image_magician.php'
+- replace line 2723 with `$extension = get_file_mime_type($file);`
+- replace line 225 variable $mime_types with $mime_types array

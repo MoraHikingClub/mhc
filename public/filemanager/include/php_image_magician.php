@@ -158,7 +158,7 @@
 #
 #
 # ========================================================================#
-
+include_once('mime_type_lib.php');
 
 class imageLib {
 
@@ -2720,7 +2720,8 @@ class imageLib {
 		};
 
 		// *** Get extension / image type
-		$extension = mime_content_type($file);
+		//$extension = mime_content_type($file);
+		$extension = get_file_mime_type($file);
 		$extension = fix_strtolower($extension);
 		$extension = str_replace('image/', '', $extension);
 		switch ($extension)
