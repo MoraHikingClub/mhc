@@ -26,16 +26,16 @@
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Senior Treasurer' , 'name' => 'Senior lecturer Mr.Suranga Jayasena' , 'image' => asset('images/commitee/suranga.jpg') , 'email' => 'suranga@uom.lk' , 'fbusername' => '' , 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'President' , 'name' => 'Hasitha Sandaruwan' , 'image' => asset('images/commitee/hs.jpg') , 'email' => 'hasitha.sandaruvan@gmail.com' , 'fbusername' => '' , 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Secratary' , 'name' => 'Theja Wijesiriwardane' , 'image' => asset('images/commitee/sec.jpg') , 'email' => 'thejahw@gmail.com' , 'fbusername' => 'https://www.facebook.com/theja.wijesiriwardane' , 'colnum' => '-md-4'])    
+                    @include('layouts.round-card', [ 'role' => 'President' , 'name' => 'Ramodha Pragnarathne' , 'image' => asset('images/commitee/as-sec.jpg') , 'email' => 'ramodhapragnarathne@gmail.com' , 'fbusername' => '' , 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Secratary' , 'name' => 'Umesh Mihiran ' , 'image' => asset('images/commitee/umesh.jpg') , 'email' => 'umeshmihiran@gmail.com' , 'fbusername' => 'https://www.facebook.com/umesh.mihiran' , 'colnum' => '-md-4'])    
                 </div>
                 <div class="row top-padding scroll-commitee margin-bottom-low" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Assistant Secretary' , 'name' => 'Ramodha Pragnarathne' , 'image' => asset('images/commitee/as-sec.jpg') , 'email' => 'ramodhapragnarathne@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Administration Committee' , 'name' => 'Thilina Liyanage' , 'image' => 'https://drive.google.com/uc?id=1J_nAaRNEkTsWyn6z3XwhOrzpxAGT7D44' , 'email' => 'imwageesha@gmail.com' , 'fbusername' => 'https://www.facebook.com/wageesha.gayaneth' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Financial Commitee' , 'name' => 'Thilina Dilshan' , 'image' => asset('images/commitee/finance-vp.jpg') , 'email' => 'thilina.dilshan14149@gmail.com' , 'fbusername' => 'https://www.facebook.com/ThiliDilz' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Media Commitee' , 'name' => 'Chathuranga Saman' , 'image' => asset('images/commitee/saman.jpg') , 'email' => 'cskmedia2@gmail.com' , 'fbusername' => 'http://www.facebook.com/cskmedia3' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Health & Safety Commitee' , 'name' => 'Kumashi Dasanayaka' , 'image' => 'https://drive.google.com/uc?id=1tYhdao5wX_6_rCeLneyMIGKcKfPULY2Q' , 'email' => 'k.s.dasanayaka@gmail.com' , 'fbusername' => 'https://www.facebook.com/kumashi.dasanayaka' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Special Operations Commitee' , 'name' => 'Harith B. Gunathilaka' , 'image' => 'https://drive.google.com/uc?id=1dA9URe3ESMdPmDGBrBjsTrAsT5iyPp__' , 'email' => 'harithb7gunathilaka@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])   
+                    @include('layouts.round-card', [ 'role' => 'Assistant Secretary' , 'name' => 'Kumashi Dasanayaka' , 'image' => 'https://drive.google.com/uc?id=1tYhdao5wX_6_rCeLneyMIGKcKfPULY2Q' , 'email' => 'k.s.dasanayaka@gmail.com' , 'fbusername' => 'https://www.facebook.com/kumashi.dasanayaka' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Administration Committee' , 'name' => 'Madushan Neranjana Karunathilake' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'neranjanmadush@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Financial Commitee' , 'name' => 'Nawodani Jayasooriya' , 'image' => 'https://drive.google.com/uc?id=1qtqXZ9HIoMrfWJkipXZ8a2703o9ptCYA' , 'email' => 'nawojay@gmail.com' , 'fbusername' => 'https://www.facebook.com/nawojay.5' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Media Commitee' , 'name' => 'Bawantha Dilshan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'bawanthadilshan96@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100002939005855 ' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Health & Safety Commitee' , 'name' => 'Kalana Sudaraka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'sudarakasandanayaka@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>Research & Development Commitee' , 'name' => 'Shakya Dhammage' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'shakyddhammage@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])   
                 </div>
             </section>
             <!--Editors-->
@@ -46,10 +46,10 @@
                     </div>
                 </div>
                 <div class="row top-padding scroll-commitee"  data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Assistant Secretary' , 'name' => 'Ramodha Pragnarathne' , 'image' => asset('images/commitee/as-sec.jpg') , 'email' => 'ramodhapragnarathne@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Editor' , 'name' => 'Kasuni Gamage' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kasunisdgamage@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'Reshan Dissanayake' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'reshan.dissanayake96@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'Hasitha Ilangakon' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'imhbi97@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Assistant Secretary' , 'name' => 'Kumashi Dasanayaka' , 'image' => 'https://drive.google.com/uc?id=1tYhdao5wX_6_rCeLneyMIGKcKfPULY2Q' , 'email' => 'k.s.dasanayaka@gmail.com' , 'fbusername' => 'https://www.facebook.com/kumashi.dasanayaka' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Senior Editor' , 'name' => 'Ishara Sandanuwan' , 'image' => asset('images/commitee/poliya.jpg') , 'email' => 'isharasandanuwan97@gmail.com' , 'fbusername' => 'https://www.facebook.com/ishara.sandanuwan.7' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'Madhusha Bandara' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'madhushab007@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'Punsala Sandaruni ' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'sanpunsala@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                 </div>
             </section>
 
@@ -61,15 +61,15 @@
                     </div>
                 </div>
                 <div class="row top-padding justify-content-center"  data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Thilina Liyanage' , 'image' => 'https://drive.google.com/uc?id=1J_nAaRNEkTsWyn6z3XwhOrzpxAGT7D44' , 'email' => 'imwageesha@gmail.com' , 'fbusername' => 'https://www.facebook.com/wageesha.gayaneth', 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Dimalka Nuwangi' , 'image' => asset('images/commitee/admin-ad.jpg') , 'email' => 'dabeyrathna3@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100010774638254', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Madushan Neranjana Karunathilake' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'neranjanmadush@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Thilina Liyanage' , 'image' => 'https://drive.google.com/uc?id=1J_nAaRNEkTsWyn6z3XwhOrzpxAGT7D44' , 'email' => 'imwageesha@gmail.com' , 'fbusername' => 'https://www.facebook.com/wageesha.gayaneth', 'colnum' => '-md-4'])
                 </div>
                 <div class="row top-padding scroll-commitee"  data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Prabuddhika Ramawickrama' , 'image' => 'https://drive.google.com/uc?id=1yKqMGNmkWCdT_nXoJASMDCHZ2sqhtb5L' , 'email' => 'prabuddhikaghsk@gmail.com' , 'fbusername' => 'https://www.facebook.com/prabuddhika.ramawickrama' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Yasara Dakshinabandara' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'yasaradakshinaphd@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Pramuditha Kaluthanthri' , 'image' => asset('images/commitee/admin-2.jpg') , 'email' => 'hivinkaluthanthri@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Pasindu Sandaruwan ' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'pasindusandaruwan2012@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Reshaka Weerasinghe' , 'image' => asset('images/commitee/admin-4.jpg') , 'email' => 'reshakalakshan@gmail.com' , 'fbusername' => 'https://m.facebook.com/reshaka.weerasinghe', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nimna Perera' , 'image' => asset('images/commitee/admin-5.jpg') , 'email' => 'nimnaperera98@gmail.com' , 'fbusername' => 'https://www.facebook.com/nnimna.perera/', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Pramuditha Kaluthanthri' , 'image' => asset('images/commitee/admin-2.jpg') , 'email' => 'hivinkaluthanthri@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Yomali Rekha' , 'image' => asset('images/commitee/person.jpg') , 'email' => '' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                 </div>
             </section>
 
@@ -81,15 +81,15 @@
                     </div>
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Thilina Dilshan' , 'image' => asset('images/commitee/finance-vp.jpg') , 'email' => 'thilina.dilshan14149@gmail.com' , 'fbusername' => 'https://www.facebook.com/ThiliDilz', 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Hansa Tharuka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'hansa.morasquad@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Nawodani Jayasooriya' , 'image' => 'https://drive.google.com/uc?id=1qtqXZ9HIoMrfWJkipXZ8a2703o9ptCYA' , 'email' => 'nawojay@gmail.com' , 'fbusername' => 'https://www.facebook.com/nawojay.5', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Thilina Dilshan' , 'image' => asset('images/commitee/finance-vp.jpg') , 'email' => 'thilina.dilshan14149@gmail.com' , 'fbusername' => 'https://www.facebook.com/ThiliDilz', 'colnum' => '-md-4'])
                 </div>
                 <div class="row top-padding scroll-commitee"  data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Harith hansaka' , 'image' => asset('images/commitee/finance-1.jpg') , 'email' => 'harithhansaka@gmail.com' , 'fbusername' => 'fb.com/harithhansaka' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Dulan Chandrasiri' , 'image' => asset('images/commitee/person.jpg') , 'email' => '96dulanchandrasiri@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Gishan Dilruwan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'iamgishan@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Daneesha Ranasinghe' , 'image' => asset('images/commitee/finance-3.jpg') , 'email' => 'daneesharanasinghe@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nawodani Jayasooriya' , 'image' => 'https://drive.google.com/uc?id=1qtqXZ9HIoMrfWJkipXZ8a2703o9ptCYA' , 'email' => 'nawojay@gmail.com' , 'fbusername' => 'https://www.facebook.com/nawojay.5', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Chamin Naveendra' , 'image' => asset('images/commitee/finance-5.jpg') , 'email' => 'chaminnaveendra@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Ruwini Randika' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'gruwini97@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee member' , 'name' => 'Rashi Prabhath' , 'image' => asset('images/commitee/person.jpg') , 'email' => '' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                 </div>
             </section>
 
@@ -101,19 +101,17 @@
                     </div>
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Chathuranga Saman' , 'image' => asset('images/commitee/saman.jpg') , 'email' => 'ucmsulo@gmail.com' , 'fbusername' => 'http://www.facebook.com/cskmedia3', 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Sulochana Udawela' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'cskmedia2@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President' ,'name' => 'Bawantha Dilshan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'bawanthadilshan96@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100002939005855' , 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Chathuranga Saman' , 'image' => asset('images/commitee/saman.jpg') , 'email' => 'ucmsulo@gmail.com' , 'fbusername' => 'http://www.facebook.com/cskmedia3', 'colnum' => '-md-4'])
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Ravindu Nethmina' , 'image' => 'https://drive.google.com/uc?id=1A-TTn8O11NXB5UJWwceHrKrQvDGSJLWN' , 'email' => 'nethmina.kar@gmail.com' , 'fbusername' => 'https://www.facebook.com/ravindu.nethmina.3' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Kanishka Arsakulasooriya' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kanishkaarsakulasooriya@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Sanoja Darshani' , 'image' => 'https://drive.google.com/uc?id=1jLF2LF2NrlNoLccvBDm1sG218AqiGJrU' , 'email' => 'sanojadarshani96@gmail.com' , 'fbusername' => 'https://www.facebook.com/sanojadarsika.sanojadarsika' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Binara Gunaratne' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'binaragunaratne@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Gihan Shanaka' , 'image' => 'https://drive.google.com/uc?id=1AT28q23gdMoDQnskjkEdWdCujSgLIwyW' , 'email' => 'gshanaka2@live.com' , 'fbusername' => 'https://www.facebook.com/GShanakaPhotography/' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Chandika Dilshan' , 'image' => asset('images/commitee/person.jpg') , 'email' => '' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Kanishka Gayan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'thennakoontmkg95@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nisal Harshana' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'nisalwidyarathna@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Pasindu Maduranga' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'pasindumaduranga9717@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Dewsara Nipun' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'ktdnipun@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Murukupillai Jagaprahaladan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'bieberpragu@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Kawmini Wijekoon' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kawminiwijekoon@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Madhavee Narampanawa' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'msnarampanawa@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                 </div>
             </section>
 
@@ -125,17 +123,17 @@
                     </div>
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Kumashi Dasanayaka' , 'image' => 'https://drive.google.com/uc?id=1tYhdao5wX_6_rCeLneyMIGKcKfPULY2Q' , 'email' => 'k.s.dasanayaka@gmail.com' , 'fbusername' => 'https://www.facebook.com/kumashi.dasanayaka', 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Gayan Deegala' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'gayandeegala@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Kalana Sudaraka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'sudarakasandanayaka@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    {{-- @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Gayan Deegala' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'gayandeegala@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4']) --}}
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Umaya Jayaratna' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'umaya.jayaratne95@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Sanduni Piumika' , 'image' => 'https://drive.google.com/uc?id=1H5xKb4dwI8A8lXx15OlyCmk5fw_dpeN9' , 'email' => 'piumikasanduni55@gmail.com' , 'fbusername' => 'https://www.facebook.com/sanduni.piumika.16' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Sadeepa Jayasinghe' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'Sadeepajayasinghe1115@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Shakya Dhammage' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'shakyddhammage@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Gajitha Kavinda' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'hmgk456@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Vishwa Wanniarachchi ' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'wkvishwa97@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Virad Dilanka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'viraddilanka2554@gamil.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Kanishka Arsakulasooriya' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kanishkaarsakulasooriya@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100006721246525', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Miyuru Lakshan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'miyurulakshan.ml@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Umaya Jayarathne' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'umaya.jayaratne95@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100009471010538', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Udara Bandara' , 'image' => asset('images/commitee/person.jpg') , 'email' => '' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                 </div>
             </section>
 
@@ -143,20 +141,20 @@
             <section>
                 <div class="row top-padding" data-entrance="from-bottom">
                     <div class="col-md-12 text-center">
-                        <h2>Special Operations Commitee</h2>
+                        <h2>Research & Development Commitee</h2>
                     </div>
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Harith B. Gunathilaka' , 'image' => 'https://drive.google.com/uc?id=1dA9URe3ESMdPmDGBrBjsTrAsT5iyPp__' , 'email' => 'harithb7gunathilaka@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
-                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Kasun Weerasekara' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kasun_weerasekara@icloud.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Shakya Dhammage' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'shakyddhammage@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
+                    {{-- @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Kasun Weerasekara' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kasun_weerasekara@icloud.com' , 'fbusername' => '', 'colnum' => '-md-4']) --}}
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Amila M. Peiris' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'amila.mpeiris@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Chamara Jayasinghe' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'nuwanchamara976j@gmail.com' , 'fbusername' => 'https://www.facebook.com/nuwanjchama' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Umesh Mihiran ' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'umeshmihiran@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Kalana Sudaraka ' , 'image' => asset('images/commitee/person.jpg') , 'email' => '' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Bawantha Dilshan' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'bawanthadilshan96@gmail.com' , 'fbusername' => 'https://www.facebook.com/profile.php?id=100002939005855 ', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Thathsara Munasingha ' , 'image' => asset('images/commitee/thatha.jpg') , 'email' => 'rthathsara96@gmail.com' , 'fbusername' => 'https://www.facebook.com/thathsara.munasingha' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Nimna Perera' , 'image' => asset('images/commitee/admin-5.jpg') , 'email' => 'nimnaperera98@gmail.com' , 'fbusername' => 'https://www.facebook.com/nnimna.perera/' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'I. B. Dileepa Jayasiri' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'dileepajayasiri@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Moksha Thisarani Kulathilaka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'thisaranikulathilaka@gmail.com' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Ishani Dahanayaka ' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'chamudu.18@business.mrt.ac.lk' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
                 </div>
             </section>
     </div>

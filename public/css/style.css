@@ -797,6 +797,13 @@ p.related-content:hover {
 }
 
 
+/*--past commitee--*/
+
+.commitee-list {
+    list-style: none;
+}
+
+
 /*---blog page---*/
 
 .blog-contain {

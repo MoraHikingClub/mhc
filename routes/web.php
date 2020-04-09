@@ -11,8 +11,6 @@
 |
 */
 
-use App\Knowledge;
-
 Route::get('/', [
     'as' => 'index',
     'uses' => 'PagesController@getIndex'
@@ -47,6 +45,18 @@ Route::get('/memories', ['as' => 'gallery', 'uses' => 'PagesController@gallery']
 Route::get('/about/commitee', function() {
     return view('commitee');
 })->name('commitee');
+
+
+
+Route::prefix('/about/past-commitee')->group(function(){
+    Route::get('', function(){
+        return view('past-commitee');
+    })->name('past-commitee');
+
+    Route::get('2019', function(){
+        return view('commitee/commitee-2019');
+    })->name('past-commitee-2019');
+});
 
 Route::get('/about/members', [
     'uses' => 'MemberController@index',

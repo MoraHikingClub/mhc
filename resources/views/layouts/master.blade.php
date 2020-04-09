@@ -141,6 +141,9 @@
                                     <li>
                                         <a class="nav-link" href="{{ route('members') }}">Members</a>
                                     </li>
+                                    <li>
+                                        <a class="nav-link" href="{{ route('past-commitee') }}">Past commitees</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item {{ Request::segment(1) === 'blog' ? 'active' : '' }}">
