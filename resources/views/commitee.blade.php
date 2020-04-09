@@ -124,7 +124,7 @@
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Kalana Sudaraka' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'sudarakasandanayaka@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
-                    {{-- @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Gayan Deegala' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'gayandeegala@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4']) --}}
+                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Gayan Deegala' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'gayandeegala@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
@@ -146,7 +146,7 @@
                 </div>
                 <div class="row top-padding justify-content-center" data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Vice President' , 'name' => 'Shakya Dhammage' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'shakyddhammage@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
-                    {{-- @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Kasun Weerasekara' , 'image' => asset('images/commitee/person.jpg') , 'email' => 'kasun_weerasekara@icloud.com' , 'fbusername' => '', 'colnum' => '-md-4']) --}}
+                    @include('layouts.round-card', [ 'role' => 'Advisor' , 'name' => 'Harith B. Gunathilaka' , 'image' => 'https://drive.google.com/uc?id=1dA9URe3ESMdPmDGBrBjsTrAsT5iyPp__' , 'email' => 'harithb7gunathilaka@gmail.com' , 'fbusername' => '', 'colnum' => '-md-4'])
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
