@@ -26,7 +26,8 @@
 							</div>
 						</div>
 						<div class="image-container">
-							<img src="{{ asset('images/banner1.jpg') }}" alt="" class="image" />
+							{{-- <img src="{{ asset('images/banner1.jpg') }}" alt="" class="image" /> --}}
+							<img src="{{ asset('images/4th-anniversary.jpg') }}" alt="" class="image" />
 						</div>
 					</div>
 					<div class="slide">
