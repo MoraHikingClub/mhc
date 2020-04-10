@@ -42,8 +42,8 @@ Mora Hiking Club | Contact us
 			</div>
 			<div class="row margin-bottom">
 				<div class="col">
-					Hasitha Sandaruwan(President) - <a href="tel:0711005969">071 100 5969</a><br>
-					Theja Siriwardhane(Secretary) - <a href="tel:0712353770">071 235 3770</a><br>
+					Ramodha Pragnarathne(President) - <a href="tel:0711692234">071 169 2234</a><br>
+					Umesh Mihiran(Secretary) - <a href="tel:0750397062">075 039 7062</a><br>
 				</div>
 			</div>
 		</div>
