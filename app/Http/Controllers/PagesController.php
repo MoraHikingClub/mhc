@@ -18,24 +18,24 @@ use Illuminate\Support\Facades\App;
 class PagesController extends Controller
 {
     public function getIndex(){
-        $launch = Launch::find(1);
-        if($launch->launch){
-            $post = Post::latest()->first();
+    //     $launch = Launch::find(1);
+    //     if($launch->launch){
+    //         $post = Post::latest()->first();
 
-            return view('index')->with('post', $post)->with('launch', 0);
-        }else{
-            return view('launch');
-        }
-    }
+    //         return view('index')->with('post', $post)->with('launch', 0);
+    //     }else{
+    //         return view('launch');
+    //     }
+    // }
 
-    public function launch(){
-        $launch = Launch::find(1);
-        $launch->launch = 1;
-        $launch->save();
+    // public function launch(){
+    //     $launch = Launch::find(1);
+    //     $launch->launch = 1;
+    //     $launch->save();
 
         $post = Post::latest()->first();
 
-        return view('index')->with('post', $post)->with('launch',$launch);
+        return view('index')->with('post', $post);
     }
 
     public function getSingle($slug){

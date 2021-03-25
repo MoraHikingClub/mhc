@@ -174,11 +174,11 @@
         </div>
     </header>
     <div class="loader-bg">
-        @php
+        <!-- @php
             $launch = isset($launch) ? $launch : '';
-        @endphp
+        @endphp -->
 
-        @if($launch)
+        <!-- @if($launch)
         <span class="loading" style="font-weight:1000;font-size:300px;top:100px;" id="num">5</span>
         <p class="loading" style="font-weight:1000;font-size:200px;">Launching<span>.</span><span>.</span><span>.</span></p>
         <script>
@@ -193,7 +193,7 @@
                 i++;
             },1000);
         </script>
-        @else
+        @else -->
         <div class="loader">
             <img src="{{ asset('images\loading.gif') }}" alt="Loading" />
         </div>
@@ -204,7 +204,7 @@
                 loader.className += " hidden";
             });
         </script>
-        @endif
+        <!-- @endif -->
     </div>
 
     @include('layouts.messages')
