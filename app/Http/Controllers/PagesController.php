@@ -82,15 +82,15 @@ class PagesController extends Controller
         ]);
 
         $data = array(
-            'email' => $request->email,
-            'name' => $request->name,
+            'email' => 'admin@morahiking.com',
+            'name' => 'Mora Hiking Club',
             'subject' => $request->subject,
-            'bodyMessage' => $request->message
+            'bodyMessage' => 'From: '.$request->name.'<'.$request->email.'>\n\n'.$request->message
         );
 
         Mail::send('emails.contact', $data, function($message) use($data){
-            $message->from($data['email'], $data['name']);
-            $message->to('admin@morahiking.com');
+            $message->from('admin@morahiking.com', 'Mora Hiking Club');
+            $message->to('info@morahiking.com');
             $message->subject($data['subject']);
         });
 
