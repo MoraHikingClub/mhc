@@ -56,6 +56,9 @@ Route::prefix('/about/past-commitee')->group(function(){
     Route::get('2019', function(){
         return view('commitee/commitee-2019');
     })->name('past-commitee-2019');
+        Route::get('2020', function(){
+        return view('commitee/commitee-2020');
+    })->name('past-commitee-2020');
 });
 
 Route::get('/about/members', [
