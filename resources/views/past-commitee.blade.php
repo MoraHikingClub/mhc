@@ -21,7 +21,8 @@
             <section >
                 <div class="container">
                     <ul class="commitee-list">
-                        <li><h3><a href="{{ route('past-commitee-2019') }}">Commitee 2019/2020</a></h3>(President: Hasitha Sandaruwan)</li>
+                        <li><h3><a href="{{ route('past-commitee-2019') }}">Commitee 2019/2020</a></h3>(President: Hasitha Sandaruwan)</li><br>
+                        <li><h3><a href="{{ route('past-commitee-2020') }}">Commitee 2020/2021</a></h3>(President: Ramodha Pragnarathne)</li>
                     </ul>
                 </div>
                 
