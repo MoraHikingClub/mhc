@@ -40,8 +40,8 @@
 			</div>
 			<div class="row margin-bottom">
 				<div class="col">
-					Ramodha Pragnarathne(President) - <a href="tel:0711692234">071 169 2234</a><br>
-					Umesh Mihiran(Secretary) - <a href="tel:0750397062">075 039 7062</a><br>
+					Umesh Mihiran(President) - <a href="tel:0750397062">075 039 7062</a><br>
+					Daneesha Ranasinghe(Secretary) - <a href="tel:0711245672">071 124 5672</a><br>
 				</div>
 			</div>
 		</div>
