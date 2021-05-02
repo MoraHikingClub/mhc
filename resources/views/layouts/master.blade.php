@@ -2,11 +2,20 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title')</title>
+    <title>@yield('title', 'Mora Hiking Club')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <meta name="keywords"
-        content="Mora Hiking Club, University of Moratuwa, Hiking, Trekking, Mountaineering, Camping, Backpacking">
+
+    <meta name="title" content="@yield('title', 'Mora Hiking Club')" >
+    <meta name="description" content="@yield('description', 'Mora Hiking Club is a freshly formed active club in University of Moratuwa. The officially recognised dedicated body in University of Moratuwa for organising Hiking, Trekking, Mountaineering, and other related outdoor recreational activities, Mora Hiking Club is a brain child of a group of adrenaline addicts who kept looking for ways to escape the burden of education.')">
+    <meta name="keywords" content="club, members, activities, hiking, mountaineering, outdoor, mora, moratuwa, university, objective, university of moratuwa, mora hiking club, trekking, cycling, camping, waterfall, forest, mountain, waterfall hunting, risk, extreme survival">
+
+    <meta property="og:title" content ="@yield('title', 'Mora Hiking Club')">
+    <meta property="og:image" content ="@yield('og_image', 'http://www.morahiking.com/images/og.jpg')">
+    <meta property="og:site_name" content="morahiking.com">
+    <meta property="og:url" content="http://http://www.morahiking.com" />
+    <meta property="og:description" content="@yield('description', 'Mora Hiking Club is a freshly formed active club in University of Moratuwa. The officially recognised dedicated body in University of Moratuwa for organising Hiking, Trekking, Mountaineering, and other related outdoor recreational activities, Mora Hiking Club is a brain child of a group of adrenaline addicts who kept looking for ways to escape the burden of education.')">
+    
     <link rel="icon" href="{{ asset('favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
