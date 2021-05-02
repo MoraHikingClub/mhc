@@ -2,7 +2,7 @@
 
 @section('title'){{ 'Mora Hiking Club | '.$post->title }}@endsection
 
-@section('description'){{ substr(strip_tags($post->body), 0, 500) }}@endsection
+@section('description'){{ strip_tags($post->body) }}@endsection
 
 @if($post->featured_img)
 @section('og_image'){{ $post->featured_img }}@endsection
