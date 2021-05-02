@@ -1,8 +1,6 @@
 @extends('layouts.master-admin')
 
-@section('title')
-Mora Hiking Club | All albums
-@endsection
+@section('title', 'Mora Hiking Club | All albums')
 
 @section('content')
 @if(!Session::has('success') )

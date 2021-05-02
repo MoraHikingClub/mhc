@@ -1,8 +1,6 @@
 @extends('layouts.master-admin')
 
-@section('title')
-Mora Hiking Club | Edit post
-@endsection
+@section('title', 'Mora Hiking Club | Edit post')
 
 @section('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}" />

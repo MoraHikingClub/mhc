@@ -1,8 +1,6 @@
 @extends('layouts.master-social')
 
-@section('title')
-Mora Hiking Club | Yo-Yo | Edit account
-@endsection
+@section('title', 'Mora Hiking Club | Yo-Yo | Edit account')
 
 @section('content')
 @php

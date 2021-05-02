@@ -1,9 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-    Mora Hiking Club | {{ $tag->name }} Tag
-@endsection
-
+@section('title'){{ 'Mora Hiking Club | '.$tag->name.' Tag' }}@endsection
 
 @section('content')
     @if(!Session::has('success') )

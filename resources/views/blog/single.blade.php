@@ -1,17 +1,11 @@
 @extends('layouts.master')
 
-@section('title')
-Mora Hiking Club | {{ $post->title }}
-@endsection
+@section('title'){{ 'Mora Hiking Club | '.$post->title }}@endsection
 
-@section('description')
-{{ substr(strip_tags($post->body), 0, 300) }}
-@endsection
+@section('description'){{ substr(strip_tags($post->body), 0, 500) }}@endsection
 
 @if($post->featured_img)
-@section('og_image')
-{{ $post->featured_img }}
-@endsection
+@section('og_image'){{ $post->featured_img }}@endsection
 @endif
 
 @section('content')

@@ -1,8 +1,6 @@
 @extends('layouts.master-admin')
 
-@section('title')
-Mora Hiking Club | All knowledge cards
-@endsection
+@section('title', 'Mora Hiking Club | All knowledge cards')
 
 @section('content')
 @if(!Session::has('success') )

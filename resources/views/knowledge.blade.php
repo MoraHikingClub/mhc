@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-Mora Hiking Club | Hiking Knowledge
-@endsection
+@section('title', 'Mora Hiking Club | Hiking Knowledge')
 
 @section('content')
 

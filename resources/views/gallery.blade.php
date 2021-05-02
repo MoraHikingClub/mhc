@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-Mora Hiking Club | Gallery
-@endsection
+@section('title', 'Mora Hiking Club | Gallery')
 
 @section('stylesheets')
 <link rel="stylesheet" href="{{ asset('gallery/css/unite-gallery.css') }}" type="text/css" />

@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-Mora Hiking Club | Contact us
-@endsection
+@section('title', 'Mora Hiking Club | Contact us')
 
 @section('content')
 <div class="header-contact"><img src="{{ asset('images/header-contact.jpg') }}" class="header-contact-img" alt="Contact us" /></div>

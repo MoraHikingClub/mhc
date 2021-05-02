@@ -1,8 +1,6 @@
 @extends('layouts.master-admin')
 
-@section('title')
-Mora Hiking Club | {{ $knowledge->title }}
-@endsection
+@section('title'){{ 'Mora Hiking Club | '.$knowledge->title }}@endsection
 
 @section('content')
 <div class="container">

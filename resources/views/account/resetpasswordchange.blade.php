@@ -1,8 +1,6 @@
 @extends('layouts.master-social')
 
-@section('title')
-Mora Hiking Club | Yo-Yo | Change password
-@endsection
+@section('title', 'Mora Hiking Club | Yo-Yo | Change password')
 
 @section('content')
 <div class="auth">

@@ -1,8 +1,6 @@
 @extends('layouts.master-admin')
 
-@section('title')
-Mora Hiking Club | Active users
-@endsection
+@section('title', 'Mora Hiking Club | Active users')
 
 @section('content')
 <div class="post-contain">
