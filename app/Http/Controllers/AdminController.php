@@ -20,7 +20,7 @@ class AdminController extends Controller
 
     public function pendingUsers(){
         $users = User::where('activated','=',0)->orderBy('m_id','desc')->get();
-        $m_id = User::max('m_id');
+        $m_id = User::where('activated','=',1)->max('m_id');
 
         if($m_id){
             $m_id = $m_id+1;
