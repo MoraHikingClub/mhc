@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    
     public function activeUsers(){
         $users = User::where('activated','=',1)->orderBy('m_id','desc')->get();
 
@@ -25,7 +26,7 @@ class AdminController extends Controller
         if($m_id){
             $m_id = $m_id+1;
         }else{
-            $m_id = 220001;
+            $m_id = (int)(date('y').'0001');
         }
         if(Auth::user()->role_id==4 || Auth::user()->role_id==5 || Auth::user()->role_id==1){
             return view('admin.pendingusers')->with('users',$users)->with('m_id',$m_id);
@@ -145,11 +146,11 @@ class AdminController extends Controller
     public function activateUser(Request $request){
         $id = $request->id;
         $user = User::find($id);
-        $m_id = User::max('m_id');
+        $m_id = User::where('activated','=',1)->max('m_id');
         if($m_id){
             $user->m_id = $m_id+1;
         }else{
-            $user->m_id = 220001;
+            $user->m_id = (int)(date('y').'0001');
         }
         $user->activated = 1;
         $user->acc_activated_at = now();
