@@ -113,11 +113,11 @@
         };
     };
 
-    $('#search').on('keyup', debouce(function() {
+    $('#search').on('keyup', debounce(function() {
         var value = $(this).val();
         $.ajax({
             type: 'get',
-            url: "{{ route(' admin.searchactiveusers ')}}",
+            url: "{{ route('admin.searchactiveusers')}}",
             data: {
                 'q': value
             },
