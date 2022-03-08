@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row" style="margin-bottom:50px;">
             <div class="col-md-3">
-                <input type="text" name="q" class="form-control" placeholder="Search..." id="search" style="border: 1px solid #ced4da;"/>
+                <input type="text" name="q" class="form-control" placeholder="Search..." id="search" style="border: 1px solid #ced4da;" />
             </div>
             <div class="col-md-3">
                 <h3>Next Membership ID : <b><span class="m_id"></span>{{ $m_id }}</b></h3>
@@ -55,51 +55,52 @@
                             </thead>
                             <tbody>
                                 @php
-                                    $i=0;
+                                $i=0;
                                 @endphp
                                 @foreach($users as $user)
-                                    @if($user->email != 'webadmin@morahiking.com')
-                                    @php
-                                        $i++;
-                                    @endphp
-                                    <tr><td>
-                                            <form method="post" action="{{ route('admin.activateuser') }}">
-                                                @csrf
-                                                <input type="hidden" name="id" value="{{ $user->id }}" />
-                                                <button class="btn btn-primary btn-round btn-sm" type="submit">Activate</button>
-                                            </form>
-                                        </td>
-                                        <td>{{ $i }}</td>
-                                        <td>{{ str_pad($user->id, 4, '0', STR_PAD_LEFT) }}</td>
-                                        <td>{{ $user->fname }}</td>
-                                        <td>{{ $user->lname }}</td>
-                                        <td>{{ $user->fullname }}</td>
-                                        <td>{{ $user->dob }}</td>
-                                        <td>{{ $user->nic_no }}</td>
-                                        <td>{{ $user->gender }}</td>
-                                        <td>{{ $user->contact_no }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->uni_reg_no }}</td>
-                                        <td>{{ $user->faculty }}</td>
-                                        <td>{{ $user->degree }}</td>
-                                        <td>Level {{ $user->level }}</td>
-                                        <td>{{ $user->skills }}</td>
-                                        <td>{{ $user->bio }}</td>
-                                        <td>{{ $user->fb_url }}</td>
-                                        <td>{{ $user->insta_url }}</td>
-                                        <td>{{ $user->kin_name }}</td>
-                                        <td>{{ $user->kinship }}</td>
-                                        <td>{{ $user->kin_no }}</td>
-                                        <td>{{ $user->kin_no1 }}</td>
-                                        <td>{{ $user->kin_address }}</td>
-                                        <td>{{ $user->blood }}</td>
-                                        <td>{{ $user->first_aid }}</td>
-                                        <td>{{ $user->injury }}</td>
-                                        <td>{{ $user->longterm_med_issue }}</td>
-                                        <td>{{ $user->medicine }}</td>
-                                        <td>{{ $user->acc_activated_at }}</td>
-                                    </tr>
-                                    @endif
+                                @if($user->email != 'webadmin@morahiking.com')
+                                @php
+                                $i++;
+                                @endphp
+                                <tr>
+                                    <td>
+                                        <form method="post" action="{{ route('admin.activateuser') }}">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $user->id }}" />
+                                            <button class="btn btn-primary btn-round btn-sm" type="submit">Activate</button>
+                                        </form>
+                                    </td>
+                                    <td>{{ $i }}</td>
+                                    <td>{{ str_pad($user->id, 4, '0', STR_PAD_LEFT) }}</td>
+                                    <td>{{ $user->fname }}</td>
+                                    <td>{{ $user->lname }}</td>
+                                    <td>{{ $user->fullname }}</td>
+                                    <td>{{ $user->dob }}</td>
+                                    <td>{{ $user->nic_no }}</td>
+                                    <td>{{ $user->gender }}</td>
+                                    <td>{{ $user->contact_no }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->uni_reg_no }}</td>
+                                    <td>{{ $user->faculty }}</td>
+                                    <td>{{ $user->degree }}</td>
+                                    <td>Level {{ $user->level }}</td>
+                                    <td>{{ $user->skills }}</td>
+                                    <td>{{ $user->bio }}</td>
+                                    <td>{{ $user->fb_url }}</td>
+                                    <td>{{ $user->insta_url }}</td>
+                                    <td>{{ $user->kin_name }}</td>
+                                    <td>{{ $user->kinship }}</td>
+                                    <td>{{ $user->kin_no }}</td>
+                                    <td>{{ $user->kin_no1 }}</td>
+                                    <td>{{ $user->kin_address }}</td>
+                                    <td>{{ $user->blood }}</td>
+                                    <td>{{ $user->first_aid }}</td>
+                                    <td>{{ $user->injury }}</td>
+                                    <td>{{ $user->longterm_med_issue }}</td>
+                                    <td>{{ $user->medicine }}</td>
+                                    <td>{{ $user->acc_activated_at }}</td>
+                                </tr>
+                                @endif
                                 @endforeach
                             </tbody>
                         </table>
@@ -112,23 +113,34 @@
 @endsection
 
 @section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript">
-    $('#search').on('keyup', function(){
-    var value = $(this).val();
-    $.ajax({
-    type:'get',
-    url:'{{ route('admin.searchpendingusers')}}',
-    data:{'q':value},
-    success:function(data){
-      $('tbody').html(data);
-    }
-    });
-    });
+    const debounce = (callback, wait) => {
+        let timeout;
+
+        return (argument) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => callback(argument), wait);
+        };
+    };
+    $('#search').on('keyup', debouce(function() {
+        var value = $(this).val();
+        $.ajax({
+            type: 'get',
+            url: "{{ route('admin.searchpendingusers')}}",
+            data: {
+                'q': value
+            },
+            success: function(data) {
+                $('tbody').html(data);
+            }
+        });
+    }, 500));
+
     $.ajaxSetup({
-    headers: {
-    'csrftoken' :'{{ csrf_token() }}'
-    }
+        headers: {
+            'csrftoken': '{{ csrf_token() }}'
+        }
     });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</script>
 @endsection
