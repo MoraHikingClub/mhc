@@ -38,7 +38,9 @@ class AdminController extends Controller
         if($request->ajax()){
             $output='';
             $i=0;
-            $users = User::where('id','LIKE','%'.$request->q.'%')->where('activated','=',0)->get();
+            $users = User::where(function ($query) use ($request) {
+                $query->where('id','LIKE','%'.ltrim($request->q, "0").'%')->orWhere('fullname','LIKE','%'.ltrim($request->q, "0").'%');
+            })->where('activated','=',0)->get();
             if($users){
                 foreach($users as $user){
                     if($user->email != 'webadmin@morahiking.com'){
