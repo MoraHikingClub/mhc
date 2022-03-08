@@ -124,7 +124,7 @@
         };
     };
     $('#search').on('keyup', debounce(function() {
-        var value = $(this).val();
+        var value = $('#search').val();
         $.ajax({
             type: 'get',
             url: "{{ route('admin.searchpendingusers')}}",
