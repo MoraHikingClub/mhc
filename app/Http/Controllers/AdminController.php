@@ -149,7 +149,7 @@ class AdminController extends Controller
         if($m_id){
             $user->m_id = $m_id+1;
         }else{
-            $user->m_id = 200001;
+            $user->m_id = 220001;
         }
         $user->activated = 1;
         $user->acc_activated_at = now();
