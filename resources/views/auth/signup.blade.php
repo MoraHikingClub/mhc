@@ -115,7 +115,8 @@
                                         'Business'                  => 'Faculty of Business', 
                                         'Engineering'               => 'Faculty of Engineering', 
                                         'Information Technology'    => 'Faculty of Information Technology',
-                                        'Institute of Technology(NDT)'    => 'Institute of Technology(NDT)'
+                                        'Institute of Technology(NDT)'    => 'Institute of Technology(NDT)',
+                                        'Medical'                  => 'Faculty of Medicine'
                                         ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
                                 <div class="col-sm-5 form-group bmd-form-group padding-left-none">
@@ -151,6 +152,7 @@
                                         'Nautical Studies(NDT)'                         => 'Nautical Studies(NDT)',
                                         'Polymer Technology(NDT)'                       => 'Polymer Technology(NDT)',
                                         'Textile & Clothing Technology(NDT)'            => 'Textile & Clothing Technology(NDT)',
+                                        'Medicine'                                      => 'Medicine',
                                         'Other'                                         => 'Other'
                                         ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
