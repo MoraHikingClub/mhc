@@ -35,7 +35,7 @@ class UserController extends Controller
             'contact_no'            => 'required',
             'email'                 => 'required|email|unique:users,email',
             'password'              => 'required|max:60|same:confirm',
-            'uni_reg_no'            => array('required','unique:users,uni_reg_no','regex:/^(([1][5-9]|[2][01])([0-9]{4}[A-Za-z]|([\/][I][T][\/][E][T][\/][0-9]{3})))$/'),
+            'uni_reg_no'            => array('required','unique:users,uni_reg_no','regex:/^(([1][5-9]|[2][01]|20EE)([0-9]{4}[A-Za-z]|([\/][I][T][\/][E][T][\/][0-9]{3}|[0-9]{4})))$/'),
             'faculty'               => 'required|max:255',
             'degree'                => 'required|max:255',
             'level'                 => 'required|max:6',
