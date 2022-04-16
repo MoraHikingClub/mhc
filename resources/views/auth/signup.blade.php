@@ -104,7 +104,7 @@
                             <div class="row">
                                 <div class="col-sm-6 form-group bmd-form-group padding-left-none">
                                     {{ Form::label('uni_reg_no', 'University Registration No.',['class'=>'bmd-label-floating']) }}
-                                    {{ Form::text('uni_reg_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '7', 'maxlength' => '8']) }}
+                                    {{ Form::text('uni_reg_no', null, ['class' => 'form-control', 'required' => '', 'minlength' => '7', 'maxlength' => '14']) }}
                                 </div>
                             </div>
                             <div class="row margin-bottom">
