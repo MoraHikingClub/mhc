@@ -40,8 +40,8 @@
 			</div>
 			<div class="row margin-bottom">
 				<div class="col">
-					Umesh Mihiran(President) - <a href="tel:0750397062">075 039 7062</a><br>
-					Daneesha Ranasinghe(Secretary) - <a href="tel:0711245672">071 124 5672</a><br>
+					Gishan Dilruwan(President) - <a href="tel:0766637151">076 663 7151</a><br>
+					Ishani Dahanayaka(Secretary) - <a href="tel:0711746534">071 174 6534</a><br>
 				</div>
 			</div>
 		</div>

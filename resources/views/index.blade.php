@@ -66,7 +66,7 @@
 								<div class="title">Join with us</div>
 								<div class="text">
 									<p>"There are no shortcuts to any place worth going."</p>
-									<p>Membership registartion for year 2020 is now OPEN!</p>
+									<p>Membership registration for year 2022 is now OPEN!</p>
 								</div>
 								<a href="{{ route('signup') }}" class="slide-btn">
 									<span class="slide-btn-inner">Apply now</span>
@@ -183,11 +183,11 @@
 
 			<div class="row">
 				<div class="col-sm-4 counter-border-right" style="text-align: center;">
-					<span class="counter count">25</span><span class="count">+</span><br>
+					<span class="counter count">50</span><span class="count">+</span><br>
 					<span class="count-desc">Hikes</span>
 				</div>
 				<div class="col-sm-4 counter-border-right" style="text-align: center;">
-					<span class="counter count">200</span><span class="count">+</span><br>
+					<span class="counter count">400</span><span class="count">+</span><br>
 					<span class="count-desc">Members</span>
 				</div>
 				<div class="col-sm-4" style="text-align: center;">
