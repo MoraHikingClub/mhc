@@ -153,6 +153,7 @@
                                         'Polymer Technology(NDT)'                       => 'Polymer Technology(NDT)',
                                         'Textile & Clothing Technology(NDT)'            => 'Textile & Clothing Technology(NDT)',
                                         'Medicine'                                      => 'Medicine',
+                                        'Artificial Intelligence'                       => 'Artificial Intelligence',
                                         'Other'                                         => 'Other'
                                         ], null, ['class' => 'form-control selectpicker', 'required' => '', 'placeholder' => '']) }}
                                 </div>
@@ -387,7 +388,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 form-group bmd-form-group padding-left-none">
-                                    {{ Form::label('kin_name', 'Next of Kin',['class'=>'bmd-label-floating']) }}
+                                    {{ Form::label('kin_name', 'Name of Kin',['class'=>'bmd-label-floating']) }}
                                     {{ Form::text('kin_name', null, ['class' => 'form-control', 'required' => '']) }}
                                 </div>
                             </div>
