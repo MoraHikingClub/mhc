@@ -15,6 +15,8 @@
                             <div class="card-text">
                                 <div class="text-center">
                                     <h4 class="card-title">Mora Hiking Club | Signup</h4>
+                                    <br><hr>
+                                    <h4 class="card-title" style="color: red;">Note : Membership registration for year 2022 is now CLOSED!</h4>
                                 </div>
                             </div>
                         </div>
