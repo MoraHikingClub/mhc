@@ -126,7 +126,7 @@ class UserController extends Controller
             'gender'                => 'required|max:6',
             'contact_no'            => 'required',
             'email'                 => 'required|email',
-            'uni_reg_no'            => 'required|max:7',
+            'uni_reg_no'            => 'required|max:15',
             'faculty'               => 'required|max:255',
             'degree'                => 'required|max:255',
             'level'                 => 'required|max:6',
