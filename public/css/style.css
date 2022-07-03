@@ -748,8 +748,8 @@ p.related-content:hover {
 .circular {
     display: inline-block;
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 259px;
+    height: 259px;
     overflow: hidden;
     border-radius: 50%;
 }

@@ -51,14 +51,17 @@ Route::get('/about/commitee', function() {
 Route::prefix('/about/past-commitee')->group(function(){
     Route::get('', function(){
         return view('past-commitee');
-    })->name('past-commitee');
+        })->name('past-commitee');
 
     Route::get('2019', function(){
         return view('commitee/commitee-2019');
     })->name('past-commitee-2019');
-        Route::get('2020', function(){
+    Route::get('2020', function(){
         return view('commitee/commitee-2020');
-    })->name('past-commitee-2020');
+        })->name('past-commitee-2020');
+    Route::get('2021', function(){
+        return view('commitee/commitee-2021');
+        })->name('past-commitee-2021');
 });
 
 Route::get('/about/members', [
