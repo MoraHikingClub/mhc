@@ -33,7 +33,7 @@
                     @include('layouts.round-card', [ 'role' => 'Vice President<br>Media Committee' , 'name' => 'Thilina Mendis' , 'image' => asset('images/commitee/2022/Thilina Mendis.jpg') , 'email' => 'emmanuwel236@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Vice President<br>Research & Development Committee' , 'name' => 'Dileepa Lakshan' , 'image' => asset('images/commitee/2022/Dileepa Lakshan.jpg') , 'email' => 'karunathilakadileepa@gmail.com' , 'fbusername' => 'https://www.facebook.com/Diliya073/' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Vice President<br>Finance Committee' , 'name' => 'yohan madusha' , 'image' => asset('images/commitee/2022/yohan madusha.jpeg') , 'email' => 'y.madusha97@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Vice President<br>health & Safety Committee' , 'name' => 'kavindu deshan' , 'image' => asset('images/commitee/2022/kavindu deshan.jpg') , 'email' => 'kavindudeshan321@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])  
+                    @include('layouts.round-card', [ 'role' => 'Vice President<br>health & Safety Committee' , 'name' => 'Deshan Chathuranga' , 'image' => asset('images/commitee/deshan.jpg') , 'email' => 'deshanc321@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])  
                 </div>
 
                 <div class="row">
