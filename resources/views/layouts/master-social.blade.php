@@ -136,7 +136,7 @@
                         </li>
                         @endif
                     <li class="nav-item">
-                        <a href="{{ route('account.account') }}" class="nav-link">
+                        <a href="{{ route('account.fellow') }}" class="nav-link">
                             <i class="material-icons">supervisor_account</i>Apply for Fellow Membership
                         </a>
                     </li>
