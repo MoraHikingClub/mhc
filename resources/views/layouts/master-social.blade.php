@@ -136,11 +136,6 @@
                         </li>
                         @endif
                     <li class="nav-item">
-                        <a href="{{ route('account.fellow') }}" class="nav-link">
-                            <i class="material-icons">supervisor_account</i>Apply for Fellow Membership
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="{{ route('account.account') }}" class="nav-link">
                             <i class="material-icons">account_circle</i>Account
                         </a>

@@ -173,6 +173,9 @@
                             <li class="nav-item {{ Request::segment(1) === 'contact' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                             </li>
+                            <li class="nav-item {{ Request::segment(1) === 'fellow' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('fellow') }}">Fellow Membership</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('signin') }}"><i class="fa fa-sign-in"></i> Sign in</a>
                             </li>

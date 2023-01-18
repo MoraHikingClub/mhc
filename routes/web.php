@@ -38,6 +38,9 @@ Route::get('/tag/{name}', [
 Route::get('/contact', function() {
     return view('contact');
 })->name('contact');
+Route::get('/fellow', function() {
+    return view('fellow');
+})->name('fellow');
 Route::post('/contact', ['as' => 'postContact', 'uses' => 'PagesController@postMail']);
 
 Route::get('/memories', ['as' => 'gallery', 'uses' => 'PagesController@gallery']);
@@ -153,12 +156,6 @@ Route::post('/auth/account/{api}/changepassword', [
 Route::get('/account', [
     'as' => 'account.account',
     'uses' => 'PagesController@getAccount',
-    'middleware' => 'auth'
-]);
-
-Route::get('/account/fellow', [
-    'as' => 'account.fellow',
-    'uses' => 'PagesController@getAccountFellow',
     'middleware' => 'auth'
 ]);
 

@@ -31,6 +31,22 @@
 					<div class="slide">
 						<div class="slide-content">
 							<div class="caption">
+								<div class="title">Installation of New Fellow Members</div>
+								<div class="text">
+									<p>"If you've followed the trail so far. This is your opportunity!"</p>
+								</div>
+								<a href="{{ route('fellow') }}" class="slide-btn">
+									<span class="slide-btn-inner">Apply</span>
+								</a>
+							</div>
+						</div>
+						<div class="image-container">
+							<img src="{{ asset('images/banner4.jpg') }}" alt="" class="image" />
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-content">
+							<div class="caption">
 								<div class="title">Make your first move</div>
 								<div class="text">
 									<p>"Carry as little as possible, but choose that little with care."</p>
