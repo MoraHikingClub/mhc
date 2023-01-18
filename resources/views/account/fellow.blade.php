@@ -33,7 +33,7 @@
                             <h4>Personal details</h4>
                             <!--Personal Details-->
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="form-group bmd-form-group col-sm-6 padding-left-none">
                                 {{ Form::label('fname', 'First Name', ['class' => 'bmd-label-floating']) }}
                                 {{ Form::text('fname', $user->fname, ['class' => 'form-control', 'disabled' => '']) }}
@@ -66,7 +66,7 @@
                                 {{ Form::label('contact_no', 'Contact No.', ['class' => 'bmd-label-floating']) }}
                                 {{ Form::text('contact_no', $user->contact_no, ['class' => 'form-control', 'disabled' => ''])}}
                             </div>
-                        </div>
+                        </div> -->
                     </div>  
                 </div>
                 <div class="row">
