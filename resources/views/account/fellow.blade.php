@@ -24,9 +24,9 @@
                     </div>
                 @endif
                 {!! Form::open() !!}
-                <div class="row">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9QoZPEbcWEPDmM7H8RycexHwNUXaiE3Uhh8YDlW1z-Iksvw/viewform?embedded=true" width="85%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
+                <!-- <div class="row"> -->
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9QoZPEbcWEPDmM7H8RycexHwNUXaiE3Uhh8YDlW1z-Iksvw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <!-- </div> -->
                 {!! Form::close() !!}
             </div>
     @if(!Session::has('success') )
