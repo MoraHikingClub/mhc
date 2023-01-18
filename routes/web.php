@@ -156,6 +156,12 @@ Route::get('/account', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/account/fellow', [
+    'as' => 'account.fellow',
+    'uses' => 'PagesController@getAccountFellow',
+    'middleware' => 'auth'
+]);
+
 Route::get('/account/edit', [
     'as' => 'account.edit',
     'uses' => 'PagesController@getAccountEdit',

@@ -56,6 +56,10 @@ class PagesController extends Controller
         return view('account.account');
     }
 
+    public function getAccountFellow(){
+        return view('account.fellow');
+    }
+
     public function getAccountEdit(){
         return view('account.edit');
     }
