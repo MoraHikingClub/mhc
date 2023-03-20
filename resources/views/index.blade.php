@@ -81,19 +81,19 @@
 							<div class="caption">
 								<div class="title">Membership registration for year 2023/24 is now Open!</div>
 								<div class="text">
-									<!-- <p>"There are no shortcuts to any place worth going."</p> -->
+									<p>"There are no shortcuts to any place worth going."</p>
 									<!-- <p>Membership registration for year 2022 is now CLOSED!</p> -->
 								</div>
 								<a href="{{ route('signup') }}" class="slide-btn">
 									<span class="slide-btn-inner">Apply now</span>
 								</a>
-								div class="title">Make the convo</div>
-								<div class="text">
+								<!-- div class="title">Make the convo</div> -->
+								<!-- <div class="text">
 									<p>"There are no shortcuts to any place worth going."</p>
 								</div>
 								<a href="{{ route('contact') }}" class="slide-btn">
 									<span class="slide-btn-inner">Contact Us</span>
-								</a
+								</a -->
 							</div>
 						</div>
 						<div class="image-container">
