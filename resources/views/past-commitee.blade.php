@@ -21,7 +21,8 @@
                     <ul class="commitee-list">
                         <li><h3><a href="{{ route('past-commitee-2019') }}">Commitee 2019/2020</a></h3>(President: Hasitha Sandaruwan)</li><br>
                         <li><h3><a href="{{ route('past-commitee-2020') }}">Commitee 2020/2021</a></h3>(President: Ramodha Pragnarathne)</li><br>
-                        <li><h3><a href="{{ route('past-commitee-2021') }}">Commitee 2021/2022</a></h3>(President: Gishan Dilruwan)</li>
+                        <li><h3><a href="{{ route('past-commitee-2021') }}">Commitee 2021/2022</a></h3>(President: Umesh Mihiran)</li><br>
+                        <li><h3><a href="{{ route('past-commitee-2022') }}">Commitee 2022/2023</a></h3>(President: Gishan Dilruwan)</li>
                     </ul>
                 </div>
                 
