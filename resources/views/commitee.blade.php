@@ -57,7 +57,7 @@
                 </div>
                 <div class="row top-padding scroll-commitee"  data-entrance="from-bottom">
                     @include('layouts.round-card', [ 'role' => 'Assistant Secratary' , 'name' => 'Aditha Pathiraja' , 'image' => asset('images/commitee/2022/Aditha Pathiraja.jpg') , 'email' => '#' , 'fbusername' => '', 'colnum' => ' col-xs-2'])
-                    @include('layouts.round-card', [ 'role' => 'Senior Editor' , 'name' => 'Viraj Wijesooriya' , 'image' => asset('images/commitee/2022/Viraj Wijesooriya.jpg') , 'email' => 'virajwijesooriya99@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Senior Editor' , 'name' => 'Uditha Herath' , 'image' => asset('images/commitee/2023/EDITORIAL/Uditha Herath.jpg') , 'email' => 'virajwijesooriya99@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'uditha herath' , 'image' => asset('images/commitee/2022/uditha herath.jpg') , 'email' => 'udithaherath97@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Junior editor' , 'name' => 'Chanuri Abhimani' , 'image' => asset('images/commitee/2022/Chanuri Abhimani.jpg') , 'email' => 'chanuriabhimani123@gmail.com' , 'fbusername' => '' , 'colnum' => ' col-xs-2'])
                 </div>
