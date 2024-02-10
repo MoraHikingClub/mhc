@@ -160,7 +160,7 @@
                     
                 </div>
                 <div class="row top-padding scroll-commitee" data-entrance="from-bottom">
-                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Naveen Hedalla Arachchi ' , 'image' => asset('images/commitee/naveen.jpg') , 'email' => 'naveen.hedallaarachchi@gmail.com' , 'fbusername' => 'https://www.facebook.com/naveen.hedallaarachchi/' , 'colnum' => ' col-xs-2'])
+                    @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Naveen Hedalla Arachchi' , 'image' => asset('images/commitee/naveen.jpg') , 'email' => 'naveen.hedallaarachchi@gmail.com' , 'fbusername' => 'https://www.facebook.com/naveen.hedallaarachchi/' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Dileepa Lakshan Karunathilake' , 'image' => asset('images/commitee/dileepa.jpg') , 'email' => 'karunathilakadileepa@gmail.com' , 'fbusername' => 'https://www.facebook.com/Diliya073/' , 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Madhusha Bandara' , 'image' => asset('images/commitee/madhusha.jpg') , 'email' => 'madhusha.bandara.mcb@gmail.com' , 'fbusername' => 'https://www.facebook.com/madhusha.chathuranga.7', 'colnum' => ' col-xs-2'])
                     @include('layouts.round-card', [ 'role' => 'Commitee Member' , 'name' => 'Heshani Wickramarachchi ' , 'image' => asset('images/commitee/heshani.jpg') , 'email' => 'heshaniwick99@gmail.com' , 'fbusername' => 'https://www.facebook.com/heshani.wickramarachchi.925', 'colnum' => ' col-xs-2'])
