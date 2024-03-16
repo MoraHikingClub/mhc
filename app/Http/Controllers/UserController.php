@@ -42,6 +42,7 @@ class UserController extends Controller
             'level'                 => 'required|max:6',
             'kin_name'              => 'required|max:255',
             'kin_no'                => 'required',
+            'kinship'               => 'required',
             'kin_address'           => 'required|max:255',
             'blood'                 => 'required|max:3',
             'first_aid'             => 'required|max:255',
