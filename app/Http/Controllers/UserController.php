@@ -69,7 +69,7 @@ class UserController extends Controller
         $user->faculty = $request->faculty;
         $user->degree = $request->degree;
         $user->level = $request->level;
-
+        $user->fullname = preg_replace('/[\x{1F600}-\x{1F64F}]/u', '', $request->fullname);
         //club details
         //$user->mem_cat = $request->mem_cat;
         //$user->join_date = $request->join_date_m.'/'.$request->join_date_y;
@@ -78,7 +78,7 @@ class UserController extends Controller
         }else{
             $user->skills = '';
         }
-        $user->bio = $request->bio;
+        $user->bio = preg_replace('/[\x{1F600}-\x{1F64F}]/u', '', $request->bio);
         $user->fb_url = $request->fb_url;
         $user->insta_url = $request->insta_url;
 
