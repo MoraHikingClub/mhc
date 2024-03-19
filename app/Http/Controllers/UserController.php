@@ -152,7 +152,7 @@ class UserController extends Controller
         $user->gender = $request->gender;
         $user->contact_no = $request->contact_no;
         $user->email = $request->email;
-        $user->password = bcrypt($request->password);
+        //$user->password = bcrypt($request->password);
 
         //university details
         $user->uni_reg_no = $request->uni_reg_no;
