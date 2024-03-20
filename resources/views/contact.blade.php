@@ -40,8 +40,8 @@
 			</div>
 			<div class="row margin-bottom">
 				<div class="col">
-					Gishan Dilruwan(President) - <a href="tel:0766637151">076 663 7151</a><br>
-					Ishani Dahanayaka(Secretary) - <a href="tel:0711746534">071 174 6534</a><br>
+					Harshana Wijesekara(President) - <a href="tel:0765609006">076 560 9006</a><br>
+					Tharindi Heenkende(Secretary)  - <a href="tel:0767342490">076 734 2490</a><br>
 				</div>
 			</div>
 		</div>
