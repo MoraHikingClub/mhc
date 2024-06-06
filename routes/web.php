@@ -68,6 +68,9 @@ Route::prefix('/about/past-commitee')->group(function(){
     Route::get('2022', function(){
         return view('commitee/commitee-2022');
         })->name('past-commitee-2022');
+    Route::get('2023', function(){
+        return view('commitee/committee-2023');
+        })->name('past-committee-2023');
 });
 
 Route::get('/about/members', [

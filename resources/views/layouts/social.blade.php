@@ -9,6 +9,7 @@
 
     .ig-b- {
         display: inline-block;
+         
     }
 
     .ig-b- img {
@@ -53,11 +54,15 @@
             <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 183px; height: 28px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.0639d67d95b7680840758b6833f06d87.en-gb.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en-gb&amp;screen_name=morahikingclub&amp;show_count=false&amp;show_screen_name=true&amp;size=l&amp;time=1565414950256" data-screen-name="morahikingclub"></iframe>
         </li>
         
-        <li class="social-flickr"><i class="fa fa-flickr"></i><a target="_blank" href="https://www.flickr.com/people/morahikingclub/">Flickr</a></li>
+        {{-- <li class="social-flickr"><i class="fa fa-flickr"></i><a target="_blank" href="https://www.flickr.com/people/morahikingclub/">Flickr</a></li> --}}
         
         <li class="social-insta">
         <i class="fa fa-instagram"></i>
             <a target="_blank" href="https://www.instagram.com/mora_hiking_club/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+        </li>
+        <li class="social-insta">
+        <i class="fa fa-youtube-play"></i>
+        <a target="_blank" href="https://youtube.com/@MoraHikingClub" class="ig-b- ig-b-v-24"></a>
         </li>
         <li class="social-facebook">
         <i class="fa fa-facebook"></i>
