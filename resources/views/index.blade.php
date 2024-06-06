@@ -76,7 +76,7 @@
 							<img src="{{ asset('images/banner3.jpg') }}" alt="" class="image" />
 						</div>
 					</div>
-					<div class="slide">
+					{{-- <div class="slide">
 						<div class="slide-content">
 							<div class="caption">
 								<div class="title">Membership registration for year 2023/24 is now Open!</div>
@@ -99,7 +99,7 @@
 						<div class="image-container">
 							<img src="{{ asset('images/banner4.jpg') }}" alt="" class="image" />
 						</div>
-					</div>
+					</div> --}}
 				</div>
 				<div class="pagi">
 					<div class="pagi-item is-active" id="slide1">

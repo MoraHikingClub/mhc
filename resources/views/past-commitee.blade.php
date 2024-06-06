@@ -14,18 +14,20 @@
                     <hr>
                 </div>
             </div>
-            
+
             <!--Executive members-->
             <section >
                 <div class="container">
                     <ul class="commitee-list">
-                        <li><h3><a href="{{ route('past-commitee-2019') }}">Commitee 2019/2020</a></h3>(President: Hasitha Sandaruwan)</li><br>
-                        <li><h3><a href="{{ route('past-commitee-2020') }}">Commitee 2020/2021</a></h3>(President: Ramodha Pragnarathne)</li><br>
-                        <li><h3><a href="{{ route('past-commitee-2021') }}">Commitee 2021/2022</a></h3>(President: Umesh Mihiran)</li><br>
-                        <li><h3><a href="{{ route('past-commitee-2022') }}">Commitee 2022/2023</a></h3>(President: Gishan Dilruwan)</li>
+                        <li><h3><a href="{{ route('past-commitee-2019') }}">Committee 2019/2020</a></h3>(President: Hasitha Sandaruwan)</li><br>
+                        <li><h3><a href="{{ route('past-commitee-2020') }}">Committee 2020/2021</a></h3>(President: Ramodha Pragnarathne)</li><br>
+                        <li><h3><a href="{{ route('past-commitee-2021') }}">Committee 2021/2022</a></h3>(President: Umesh Mihiran)</li><br>
+                        <li><h3><a href="{{ route('past-commitee-2022') }}">Committee 2022/2023</a></h3>(President: Gishan Dilruwan)</li><br>
+                        <li><h3><a href="{{ route('past-committee-2023') }}">Committee 2023/2024</a></h3>(President: Thilina Mendis)</li>
+
                     </ul>
                 </div>
-                
+
             </section>
     </div>
 @endsection
